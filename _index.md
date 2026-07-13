@@ -2,7 +2,7 @@
 
 Rolled-up view across every domain. Regenerate by asking any time ("update the index") — it's derived from each unit's `_unit.md`, not maintained separately by hand.
 
-_Last generated: 2026-07-15 (v3 — SkinThea resolved)_
+_Last generated: 2026-07-15 (v4 — added life-os self-tracking unit)_
 
 | Domain | Unit | Type | Status | Priority | Last updated |
 |---|---|---|---|---|---|
@@ -13,6 +13,7 @@ _Last generated: 2026-07-15 (v3 — SkinThea resolved)_
 | business | egraine / skinthea | goal | hibernated | optional | 2026-07-15 |
 | business | egraine / egraine-website-rebuild | sprint | active | high | 2026-07-14 |
 | projects | jascandi | maintenance | dormant-capable | low | 2026-07-14 |
+| projects | life-os (this framework) | maintenance | active | medium | 2026-07-15 |
 | health | — | — | no units yet | — | — |
 | sport | — | — | no units yet | — | — |
 | nutrition | — | — | no units yet | — | — |
@@ -21,6 +22,7 @@ _Last generated: 2026-07-15 (v3 — SkinThea resolved)_
 
 ## Needs your call directly (not just execution)
 
+- **life-os backup (Option A):** off-drive git backup to your Coolify VPS, decided but not yet executed — needs you to run the SSH/git commands (I don't have VPS credentials). Say the word and I'll walk you through it step by step. Option B (Gitea/Forgejo UI) stays a later upgrade, not needed now.
 - **Eden's Eva** — dormant asset (edenseva.com), park with a holding page or scope a relaunch — deferred to "revisit after Q2" per the strategic plan, so no action needed yet, just don't forget it.
 - **Medex:** publish the "active draft" Shopify theme to make the navy contact-button fix live; paste the drafted homepage meta description; configure the medexbeautyclinic.com DNS redirect.
 - **Egraine website rebuild:** legal pages (Privacy/Cookie/Terms) need a real lawyer review before they're trustworthy; contact form needs a real backend (currently a placeholder endpoint); Relationship Manager job posting needs your review (first draft, no source listing).
