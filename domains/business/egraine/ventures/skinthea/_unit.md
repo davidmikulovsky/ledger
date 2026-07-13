@@ -3,28 +3,28 @@ domain: business
 unit: skinthea
 parent_unit: business/egraine
 type: goal
-status: disputed
-priority: low
-started: n/a
-last_updated: 2026-07-14
+status: hibernated
+priority: optional
+started: idea formed, not started
+last_updated: 2026-07-15
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
 ---
 
-# SkinThea — DISPUTED, needs your call
+# SkinThea
 
-Two conflicting accounts exist for this unit. Not resolved — don't treat either as settled until you weigh in.
+Resolved (2026-07-15), was previously flagged disputed. Real idea, deliberately hibernated — not a typo, not dead, not currently active.
 
-**Your account (given directly to me):** a future Egraine venture, not yet started.
+## What it actually is
 
-**Source account (Egraine Decision Log, rows #23–#24, 2026-07-08):** while drafting Egraine's Distribution page content, SkinThea came up as one of the "current distribution brand list" items and was flagged to you as "appears to be a leftover/typo — only Uriage is confirmed." Your direct call the same day: SkinThea (and Uriage, a discontinued partnership) were both dropped from the Distribution page, which was reframed as capability-first rather than a named-brand portfolio, specifically because SkinThea was "an unrealized project."
+A real venture idea for Egraine. The concept is formed but resource-constrained: no third-party brand partner is currently named, and work hasn't started. You're keeping this as an **optional objective** — something to pick up if/when resources allow, not something on the current roadmap.
 
-## Possible explanations, not investigated
+## Why it looked disputed
 
-- Two different things sharing a name — an old, discontinued/never-launched concept ("unrealized project" in the log) versus a newer, real future-venture idea in your head that hasn't made it into any written source yet.
-- The log entry is simply correct and "future venture" was a slip when you described it to me.
-- The log entry is stale/wrong and SkinThea is a live idea that just isn't in any doc yet.
+It briefly appeared on the Egraine Distribution page as if it were something actively being pursued — that mention was the actual mistake ("typo" in the Decision Log sense: wrong to state it as current work). It was removed from the live pages and the idea was hibernated rather than pursued or discarded. The Decision Log's "unrealized project" framing was about that page copy being wrong, not a verdict that the idea itself is dead.
 
-## What would resolve this
+Separately: the **Uriage** partnership (also dropped from the same page) is unrelated to SkinThea — that was a real prior partnership that was paused/discontinued, not an idea that never started.
 
-A one-line answer from you: is SkinThea real and forward-looking, dead and already correctly dropped, or something else entirely? Once known, I'll update this unit's `type`/`status` and fold it back into (or permanently out of) the group structure in `../../_unit.md`.
+## Status going forward
+
+`status: hibernated`, `priority: optional` — deliberately outside the active 4-pillar roadmap. Revisit if resources free up or a specific brand partner comes into view. No action needed until then.

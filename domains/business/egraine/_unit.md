@@ -14,7 +14,7 @@ sub_units:
   - ventures/medex-beauty-clinic
   - ventures/thann
   - ventures/eden-eva
-  - ventures/skinthea   # DISPUTED — see note below
+  - ventures/skinthea   # hibernated, optional objective — resolved 2026-07-15
   - ventures/egraine-website-rebuild
 ---
 
@@ -30,7 +30,7 @@ This corrects an earlier version of this unit that treated Medex/Thann/SkinThea 
 - **Medex Beauty Clinic** (medex.fi) — physical, client-facing clinic. Its name comes from the Medex Bio Science Cosmetics partnership, but it's a separate operating project with its own site/decision log/task tracker (see `ventures/medex-beauty-clinic`). Now also the physical home for THANN-branded treatments and rituals.
 - **THANN** (thann.fi) — formerly a standalone day spa; the physical location is dissolved (decision 2026-07-08). Operates online-only now: e-commerce + gift cards. Treatments/rituals are redeemed in person at Medex. Keeps its own distinct visual identity (dark green + matte orange) on thann.fi only — Egraine, as distributor, doesn't reshape THANN's brand.
 - **Eden's Eva** (edenseva.com) — dormant venture, newly surfaced from the decision log (not mentioned in your original brief to me). Original site (verkkokauppaedenseva.fi) discontinued; IP retained; a new domain (edenseva.com) was acquired but sits unused, pending a defined use case. Explicitly out of scope for the current 12-month plan — "revisit after Q2."
-- **SkinThea** — **disputed.** You described this to me as a future venture. The Decision Log (rows 23–24) instead calls it "a leftover/typo — only Uriage is confirmed" and drops it from the live Distribution page as an "unrealized project." I haven't resolved this either way — see `ventures/skinthea/_unit.md` for both sides. Needs your call.
+- **SkinThea** — a real venture idea, deliberately hibernated. Concept formed, no third-party brand named yet, resource-constrained rather than dead. Its brief appearance on the live Distribution page (implying active work) was the actual mistake, since corrected by removal; the idea itself stays as an optional objective, not on the current roadmap. (Uriage, dropped from the same page, is unrelated — a separate real partnership that was paused/discontinued.)
 - **In-clinic treatment brands** — Sunekos, Dermapen, Restylane, Profhilo: used *within* Medex/THANN treatments, explicitly **not** part of Egraine's external distribution business. Not tracked as units.
 
 ## Strategy: the 4 pillars (adopted 2026-07-08, from Egraine_Oy_Strategic_Plan)
@@ -56,7 +56,6 @@ This corrects an earlier version of this unit that treated Medex/Thann/SkinThea 
 
 ## Open decisions needing you specifically
 
-- **SkinThea** — real or dropped? (see disputed note above)
 - **Eden's Eva** — park with a holding page, or scope a relaunch? Plan says revisit after Q2.
 - Two Careers postings need your review: Sales Representative (sourced from a real prior listing) and Relationship Manager/Community Builder (first draft, no source listing).
 - Legal pages need a qualified Finnish/EU lawyer before anything goes live.

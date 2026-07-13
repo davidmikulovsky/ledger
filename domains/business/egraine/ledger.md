@@ -3,6 +3,8 @@
 Newest first. Condensed from the source Decision Log (48 rows, IDs #1–#48); IDs referenced in brackets for traceability back to the source spreadsheet.
 
 ---
+**2026-07-15** — SkinThea resolved: confirmed as a real idea, deliberately hibernated (resource-constrained, no partner named, kept as an optional objective). Its live-page appearance was the actual error, corrected by removal — not a sign the idea itself was fake. Uriage clarified as unrelated: a separate real partnership, paused/discontinued.
+
 **2026-07-14** — Unit rebuilt after reading the full Egraine Decision Log (xlsx) and Strategic Plan (docx/pptx) for the first time — the earlier version of this unit was built only from a website cleanup report and got the group structure wrong (treated Medex/Thann/SkinThea as generic ventures without the real distributor/partner relationships). Corrected. Surfaced a new dormant asset (Eden's Eva) not previously known, and a factual conflict on SkinThea (you said future venture; source log says dropped as a leftover/typo) — flagged for your call, not resolved unilaterally.
 
 **2026-07-10** — Photo housekeeping: removed 38 duplicate files from redundant top-level photo folders [#46]. Attempted swapping placeholder images for real brand-supplied photography on the Medex/Thann distribution subpages [#47], but reverted same day at your request — "didn't work out" [#48]. Rest of that day's cosmetic fixes kept.
