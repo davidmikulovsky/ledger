@@ -15,7 +15,7 @@ source:
 
 # Medex Beauty Clinic
 
-Egraine venture: beauty clinic + retail, live Shopify store at medex.fi (Helsinki). Currently mid-way through a focused SEO/site-hygiene sprint that started 2026-07-10, tracked via a Decision Log (D-001 through D-016 so far) and a Task Tracker (Quick Wins / Strategic Investments / Content Pages / Process). Both source files are the live source of truth — this unit summarizes state, doesn't replace them.
+Physical, client-facing clinic + retail, live Shopify store at medex.fi (Helsinki). Correction from the Egraine Decision Log: this isn't simply "an Egraine venture" in the sense of something Egraine built and owns outright — Medex is a separate operating project, named after Egraine's distribution partnership with Medex Bio Science Cosmetics (Germany), but run as its own business with its own decision log and task tracker. It's also now the physical home for THANN-branded treatments and rituals, since THANN's own spa location was dissolved (see `../thann/_unit.md`). Currently mid-way through a focused SEO/site-hygiene sprint that started 2026-07-10, tracked via a Decision Log (D-001 through D-016 so far) and a Task Tracker (Quick Wins / Strategic Investments / Content Pages / Process). Both source files are the live source of truth — this unit summarizes state, doesn't replace them.
 
 ## Current state (as of 2026-07-14, derived from source Task Tracker)
 
