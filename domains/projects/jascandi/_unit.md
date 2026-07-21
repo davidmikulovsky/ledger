@@ -2,7 +2,7 @@
 domain: projects
 unit: jascandi
 type: maintenance
-status: dormant-capable
+status: active
 priority: low
 started: 2026 (v1), v2.1 as of July 2026
 last_updated: 2026-07-21 (canonical location confirmed)
@@ -72,6 +72,11 @@ The stray orphan `.git` at the project root — **resolved, confirmed gone 2026-
 
 Fetched `jascandi.com` directly rather than trusting the docs' claim — confirmed live and correct: page loads, title/meta description match ("Selective partnerships only"), OG/Twitter card tags and image present, canonical URL correct, no internal doc paths exposed (the security fix from v2.2 is holding in production).
 
-## Is this "active"?
+## Status and priority — reviewed 2026-07-21, per the new vocabulary in `guidelines/project-standard.md`
 
-Ambiguous by design, which is fine — it's a hobby/optionality project. Recent commit activity says it's getting attention; the "no clients yet" framing in your description says it's pre-revenue. Marked `dormant-capable` rather than `active` or `paused` so status doesn't force a false read either way — update this field whenever the real situation changes (a client/collab appears, or you consciously shelve it).
+These are two separate axes, not one combined read, and that distinction resolves what used to be an ambiguous single status:
+
+- **`status: active`** — real, current work is happening: the canonical-location resolution, the v2.2 security fix, and the documentation catch-up pass all happened this week. Whatever else is true about this project, "is anyone touching it right now" has a clean, factual answer, and it's yes.
+- **`priority: low`** — set by Ledger, per David's explicit direction to review: not because the project is unfinished or neglected, but because there's no real business or client stakes behind it yet. It's a well-maintained hobby project, and that's a perfectly coherent combination — active *and* low priority, not a contradiction. Was previously invented as `dormant-capable`, a hedge that tried to encode both axes into one field; the real fix was separating them, not finding a better single word.
+
+Priority here is a starting call for David to confirm or correct, per the review step in `guidelines/checklists.md` — not a final judgment.

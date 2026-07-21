@@ -5,7 +5,7 @@ type: maintenance
 status: active
 priority: medium
 started: 2026-07-14
-last_updated: 2026-07-21 (v0.2 — guideline system + versioning)
+last_updated: 2026-07-21 (v0.3 — status/priority vocabulary, portable guidelines, checklists)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
@@ -30,11 +30,13 @@ This framework never writes, edits, or otherwise modifies any file in a tracked 
 
 ## Versioning (from v0.2)
 
-Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.2**. v0.1 applied retroactively to everything before the guideline system existed.
+Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.3**. v0.1 applied retroactively to everything before the guideline system existed.
 
-## Guideline system — done (2026-07-21, ADR-0003)
+## Guideline system — done (2026-07-21, ADR-0003), extended same day (ADR-0004)
 
-Three documents at `guidelines/`: `project-standard.md` (what a tracked project should contain — git as the one hard requirement), `tracking-protocol.md` (how Ledger checks a project, including the claimed-vs-verified discipline learned directly from the Jascandi live-fetch check, and a new structured `components` schema in `_unit.md`), `workflow.md` (Start → Work → Check → Update → End/New-Version loop, mapped to the existing `type` field, offered as adaptable not mandatory). Piloted `components` on Jascandi immediately using data already verified the same day, rather than leaving it theoretical.
+Four documents at `guidelines/`: `project-standard.md` (what a tracked project should contain — git as the one hard requirement, plus the canonical `status`/`priority` vocabulary, added v0.3), `tracking-protocol.md` (how Ledger checks a project, including the claimed-vs-verified discipline learned directly from the Jascandi live-fetch check, and a structured `components` schema in `_unit.md`), `workflow.md` (Start → Work → Check → Update → End/New-Version loop, mapped to the existing `type` field, offered as adaptable not mandatory), `checklists.md` (the loop as concrete checkboxes, added v0.3). Piloted `components` on Jascandi immediately using data already verified the same day, rather than leaving it theoretical.
+
+**v0.3, same day:** David reviewed the above and pushed back on two things, both fixed. First, `status` and `priority` were being conflated — Jascandi's invented `dormant-capable` was really trying to say two things at once ("real work is happening" and "no business stakes behind it"). Split into two independent canonical enumerations, explicitly designed to support future visualization by either axis. Second, the three guideline documents named Jascandi and David directly, which meant they couldn't be lifted out and reused to drive a different tracking effort — rewritten generic, portable, principles-first. See ADR-0004.
 
 ## Open backlog for the framework itself
 

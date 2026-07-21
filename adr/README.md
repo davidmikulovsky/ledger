@@ -9,6 +9,7 @@ Format: numbered, short title, Status (Accepted / Superseded / Proposed), Contex
 - [0001 — Read-only boundary on tracked projects](0001-read-only-boundary-on-tracked-projects.md) — this framework never writes to a tracked project's own source; corrections happen only in this framework's own files.
 - [0002 — Storage location and hosting](0002-storage-location-and-hosting.md) — local git only, on persistent local storage, no remote for now; supersedes the 2026-07-15 GitHub-private plan for this framework's own history.
 - [0003 — Project standard, tracking protocol, and versioned changelog](0003-project-standard-and-tracking-protocol.md) — written standard for what a tracked project should contain, a formal checking protocol (including the claimed-vs-verified discipline and the `components` data structure), and versioning for Ledger itself, starting at v0.2.
+- [0004 — Status/priority vocabulary and portable guidelines](0004-status-priority-vocabulary-and-universal-guidelines.md) — `status` and `priority` formalized as two independent canonical enumerations (built for future visualization); the three guideline documents rewritten to be usable outside Ledger's own scope; `guidelines/checklists.md` added.
 
 ## Not yet backfilled
 

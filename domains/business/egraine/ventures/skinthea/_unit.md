@@ -3,10 +3,10 @@ domain: business
 unit: skinthea
 parent_unit: business/egraine
 type: goal
-status: hibernated
+status: dormant
 priority: optional
 started: idea formed, not started
-last_updated: 2026-07-15
+last_updated: 2026-07-21 (status vocabulary aligned)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
 ---
@@ -27,4 +27,4 @@ Separately: the **Uriage** partnership (also dropped from the same page) is unre
 
 ## Status going forward
 
-`status: hibernated`, `priority: optional` — deliberately outside the active 4-pillar roadmap. Revisit if resources free up or a specific brand partner comes into view. No action needed until then.
+`status: dormant`, `priority: optional` — deliberately outside the active 4-pillar roadmap. (Relabeled from the invented `hibernated` to the canonical `dormant` on 2026-07-21, per `guidelines/project-standard.md`'s status vocabulary — same meaning, standard term: no current work, no near-term plan, not closed.) Revisit if resources free up or a specific brand partner comes into view. No action needed until then.

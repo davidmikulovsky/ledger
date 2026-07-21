@@ -1,12 +1,12 @@
 # Tracking Protocol
 
-*How Ledger reads a project against `project-standard.md`. This is Ledger's side of the contract — what to look for, how to record it, and how to be honest about what's actually been checked versus what's merely claimed somewhere.*
+*How a tracker reads a project against `project-standard.md`. This is the tracker's side of the contract — what to look for, how to record it, and how to be honest about what's actually been checked versus what's merely claimed somewhere. Written to stand on its own, independent of any specific tracking tool. See `checklists.md`'s Check/Update sections for this protocol as concrete steps.*
 
 ## The core discipline: claimed vs. verified
 
-The single most important habit in this protocol, learned directly from a real case (Jascandi's README claiming "v2.2, live" — true, but not confirmed until the actual URL was fetched and checked). Every piece of information Ledger records about a project falls into one of two categories, and the unit files should say which:
+The single most important habit in this protocol, learned directly from a real case (a project's own README claiming "live" — true, but not confirmed until the actual URL was fetched and checked, at which point it turned out to be accurate — the point isn't that the claim was wrong, it's that it hadn't been checked yet). Every piece of information recorded about a project falls into one of two categories, and the record should say which:
 
-- **Verified** — Ledger (or David) directly checked it this session: ran `git log`/`git status`, fetched a live URL, read the actual file. Trustworthy as of the date checked, no further than that.
+- **Verified** — directly checked this session: ran `git log`/`git status`, fetched a live URL, read the actual file. Trustworthy as of the date checked, no further than that.
 - **Claimed** — a source document *says* something is true (a README's "Status: live," a changelog's "no known bugs") but nobody has independently confirmed it this session. Still useful, still worth recording — just don't present it with the same confidence as something verified.
 
 Never upgrade a claim to verified without actually checking. This sounds obvious and gets skipped constantly under time pressure — it's the entire reason this section exists.
@@ -15,7 +15,7 @@ Never upgrade a claim to verified without actually checking. This sounds obvious
 
 Walk the project against `project-standard.md`'s categories. For each one present, verify it if practical; if not present, record that plainly — per that standard, absence is normal, not a defect (except git).
 
-- **Git** — presence, remote (if any), current branch, latest commit (hash + date + message), working tree state (clean or has pending changes). This is the one category worth checking thoroughly every time, since it's the hard requirement and the thing most likely to have silently diverged across copies (see: the pen-drive/SSD/Documents triple-copy discovery on Egraine and Jascandi, 2026-07-21).
+- **Git** — presence, remote (if any), current branch, latest commit (hash + date + message), working tree state (clean or has pending changes). This is the one category worth checking thoroughly every time, since it's the hard requirement and the thing most likely to have silently diverged if a project has ever existed in more than one copy (an old backup, a synced folder, a second machine) — worth explicitly checking for multiple copies and comparing commit history between them, not just trusting the one in front of you.
 - **README** — present or not, and whether it looks current (stale status lines are common and worth flagging, not just parroting).
 - **Docs / specs** — what exists, roughly what it covers, whether it looks current.
 - **Changelog / decision log** — what exists; pull recent entries into the unit's own ledger rather than just noting the file exists.
@@ -66,8 +66,8 @@ This list of component types isn't fixed. A project might have a component type 
 
 ## Cadence
 
-Ad hoc by default, matching how Ledger already operates: David reports changes, or asks to "sync [unit] from source," and Ledger re-checks against this protocol at that point — not on a fixed schedule, not automatically. A scheduled/automatic check-in is a plausible future direction (see `ROADMAP.md`), not current behavior.
+Ad hoc by default: the project owner reports changes, or asks for a re-check against the real source, and the tracker re-checks against this protocol at that point — not on a fixed schedule, not automatically, unless a specific tracking system layers scheduled checks on top of this protocol.
 
 ## The boundary, restated
 
-Everything in this protocol is about *reading*. See `adr/0001-read-only-boundary-on-tracked-projects.md` — this document does not create any exception to that rule. Verifying a live URL or running `git log`/`git status` are read operations; nothing in this protocol authorizes writing to a tracked project's own files.
+Everything in this protocol is about *reading*. Any tracking system built on this protocol should hold to a hard read-only boundary against tracked projects' own source — see the specific tracking system's own governance for the formal record of that rule (in this deployment: `adr/0001-read-only-boundary-on-tracked-projects.md`). Verifying a live URL or running `git log`/`git status` are read operations; nothing in this protocol authorizes writing to a tracked project's own files.

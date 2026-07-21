@@ -2,7 +2,7 @@
 
 Rolled-up view across every domain. Regenerate by asking any time ("update the index") — it's derived from each unit's `_unit.md`, not maintained separately by hand.
 
-_Last generated: 2026-07-21 (v7 — guideline system + versioning, ADR-0003; Jascandi canonical location + live verification)_
+_Last generated: 2026-07-21 (v8 — canonical status/priority vocabulary, ADR-0004; guideline docs made portable; checklists added)_
 
 | Domain | Unit | Type | Status | Priority | Last updated |
 |---|---|---|---|---|---|
@@ -10,10 +10,10 @@ _Last generated: 2026-07-21 (v7 — guideline system + versioning, ADR-0003; Jas
 | business | egraine / medex-beauty-clinic | sprint | active | high | 2026-07-14 |
 | business | egraine / thann | maintenance | active | medium | 2026-07-14 |
 | business | egraine / eden-eva | goal | dormant | low | 2026-07-14 |
-| business | egraine / skinthea | goal | hibernated | optional | 2026-07-15 |
+| business | egraine / skinthea | goal | dormant | optional | 2026-07-21 |
 | business | egraine / egraine-website-rebuild | sprint | active | high | 2026-07-14 |
-| projects | jascandi | maintenance | dormant-capable | low | 2026-07-21 |
-| projects | ledger (this framework, v0.2) | maintenance | active | medium | 2026-07-21 |
+| projects | jascandi | maintenance | active | low | 2026-07-21 |
+| projects | ledger (this framework, v0.3) | maintenance | active | medium | 2026-07-21 |
 | health | — | — | no units yet | — | — |
 | sport | — | — | no units yet | — | — |
 | nutrition | — | — | no units yet | — | — |
@@ -22,7 +22,7 @@ _Last generated: 2026-07-21 (v7 — guideline system + versioning, ADR-0003; Jas
 
 ## Governance
 
-Decisions about Ledger itself live in `adr/` as ADRs (currently 3 — read-only boundary, local hosting, project-standard/tracking-protocol). How Ledger operates day to day is now written down in `guidelines/` (`project-standard.md`, `tracking-protocol.md`, `workflow.md`), and Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.2) / `ROADMAP.md`.
+Decisions about Ledger itself live in `adr/` as ADRs (currently 4 — read-only boundary, local hosting, project-standard/tracking-protocol, status/priority vocabulary). How Ledger operates day to day is written down in `guidelines/` (`project-standard.md` — including the canonical `status`/`priority` vocabulary — `tracking-protocol.md`, `workflow.md`, `checklists.md`), written to be usable outside Ledger's own scope. Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.3) / `ROADMAP.md`.
 
 ## Needs your call directly (not just execution)
 

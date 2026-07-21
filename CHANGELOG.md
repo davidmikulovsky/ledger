@@ -2,6 +2,16 @@
 
 *Plain-language version history of Ledger itself — what changed and when, not why (that's `adr/`) and not what's happening in tracked projects (that's each unit's own `ledger.md`). Newest first.*
 
+## v0.3 — 2026-07-21
+
+Canonical `status` and `priority` vocabularies defined in `guidelines/project-standard.md`, as two deliberately independent axes: `priority` (real-world stakes — critical/high/medium/low/optional) answers "how much does this matter," `status` (active/paused/blocked/dormant/done/ended/disputed) answers "what's happening right now." Designed explicitly to support future visualization by either axis (see `ROADMAP.md`). Two units' invented, non-canonical status values corrected: Jascandi's `dormant-capable` → `active` (priority stays `low` — active and low-priority isn't a contradiction, it's a hobby project with no real business stakes, exactly the case that prompted this change) and SkinThea's `hibernated` → `dormant` (same meaning, standard term).
+
+`guidelines/project-standard.md`, `tracking-protocol.md`, and `workflow.md` rewritten to be usable outside Ledger's own scope — stripped of Ledger/David-specific references, kept generic ("a tracker," "the project owner") so the same principles could drive a different tracking system entirely. Ledger-specific application of these principles stays where specificity belongs: `SPEC.md`, unit files, this changelog.
+
+New `guidelines/checklists.md` — the workflow loop as concrete, checkable steps per stage (Start, Work, Check, Update, End/New-Version), so a step being skipped is a choice, not an accident.
+
+Recorded as ADR-0004.
+
 ## v0.2 — 2026-07-21
 
 Guideline system added: `guidelines/project-standard.md` (what a tracked project should look like — git as a hard requirement, README/docs/changelog expectations, missing pieces framed as normal), `guidelines/tracking-protocol.md` (how Ledger checks a project against that standard, including the claimed-vs-verified discipline and the `components` data structure), and `guidelines/workflow.md` (the Start → Work → Check → Update → End/New-Version loop, as an adaptable recommendation, not a mandate).

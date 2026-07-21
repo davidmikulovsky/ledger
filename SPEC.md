@@ -23,9 +23,10 @@ LEDGER/
   CHANGELOG.md            Ledger's own version history
   ROADMAP.md              future directions, not yet built
   guidelines/
-    project-standard.md   what a tracked project should look like
+    project-standard.md   what a tracked project should look like, incl. status/priority vocabulary
     tracking-protocol.md  how Ledger checks a project, the components schema
     workflow.md           the Start/Work/Check/Update/End loop
+    checklists.md          the same loop, as concrete steps
   adr/                    governance decisions about Ledger itself
   domains/<domain>/<unit>/
     _unit.md               type, status, priority, source links, components
@@ -43,8 +44,8 @@ LEDGER/
 | `domain` | business, projects, health, sport, nutrition, relationships, career, ... | open-ended, add more as needed |
 | `unit` | free text (matches folder name) | |
 | `type` | goal \| plan \| sprint \| milestone \| maintenance | see `guidelines/workflow.md` for how each moves through the loop |
-| `status` | active \| paused \| done \| dormant \| blocked \| hibernated \| disputed \| ... | open-ended, pick what fits |
-| `priority` | high \| medium \| low \| optional | |
+| `status` | active \| paused \| blocked \| dormant \| done \| ended \| disputed | canonical set, see `guidelines/project-standard.md` — independent of priority |
+| `priority` | critical \| high \| medium \| low \| optional | canonical set, see `guidelines/project-standard.md` — real-world stakes, not progress or activity |
 | `source` | path(s) / URL(s) | where the real thing lives — never duplicated here |
 | `last_updated` | date | of the most recent ledger entry |
 | `components` | structured block, optional | see `guidelines/tracking-protocol.md` |
@@ -57,4 +58,4 @@ Right now, Ledger is a simple tracking tool for git-backed projects, plus readin
 
 ## Version
 
-See `CHANGELOG.md`. Current: v0.2.
+See `CHANGELOG.md`. Current: v0.3.

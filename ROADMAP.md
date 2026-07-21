@@ -14,6 +14,8 @@ A set of Claude skills, each generating a specific kind of report from what Ledg
 
 Longer-term: project updates feeding into something reviewable at a glance without a chat session — a lightweight dashboard or app view over the `domains/` structure, refreshed from real sources on some cadence rather than only when asked. The `components` data structure (see `guidelines/tracking-protocol.md`) is a deliberate first step toward this — a consistent, structured shape that a future dashboard could read directly, if this gets built.
 
+**Visualizing by priority and by status** is a named goal for this surface specifically — it's why `priority` and `status` were split into two small, independent, canonical enumerations (see `guidelines/project-standard.md`) rather than left as free text or one combined field. A priority-sorted view (what's urgent) and a status-grouped view (what's active/dormant/ended, kanban-style) should both be straightforward to build directly off existing `_unit.md` front-matter once this surface exists — no data model change needed later, just a reader for what's already structured today.
+
 ## Notifications
 
 Push updates out rather than requiring a pull: a phone or email notification when something tracked changes meaningfully, or when a scheduled check-in finds something worth flagging (a stale claim, a unit gone quiet, a component that stopped verifying cleanly). Would likely build on the scheduled-task capability already available in this environment, once there's a defined "what's worth notifying about" — that definition doesn't exist yet.
