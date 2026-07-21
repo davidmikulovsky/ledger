@@ -4,8 +4,9 @@ unit: egraine
 type: maintenance
 status: active
 priority: high
+urgency: medium
 started: unknown (Oy entity) — strategic reset kicked off 2026-07-08
-last_updated: 2026-07-14
+last_updated: 2026-07-21 (vocabulary v2 — status merged, urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/01-Docs"
@@ -14,7 +15,7 @@ sub_units:
   - ventures/medex-beauty-clinic
   - ventures/thann
   - ventures/eden-eva
-  - ventures/skinthea   # hibernated, optional objective — resolved 2026-07-15
+  - ventures/skinthea   # dormant, low priority — resolved 2026-07-15
   - ventures/egraine-website-rebuild
 ---
 
@@ -61,3 +62,7 @@ This corrects an earlier version of this unit that treated Medex/Thann/SkinThea 
 - Legal pages need a qualified Finnish/EU lawyer before anything goes live.
 - Contact form needs a real form-backend ID before submissions will work.
 - `footer-logo.png` is a stray unrelated template asset ("FUN WEATHER") sitting in the Logos folder — flagged for removal, not urgent.
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: medium` — ongoing multi-year build with real quarterly milestones (Q1 Foundation/Q2 Build), but no single imminent deadline this week. Distinct from `priority: high`, which reflects real business stakes, not timing. Set by Ledger per the same review pattern as priority — confirm or correct.

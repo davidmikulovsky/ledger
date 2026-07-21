@@ -28,9 +28,12 @@ LEDGER/
     workflow.md           the Start/Work/Check/Update/End loop
     checklists.md          the same loop, as concrete steps
   adr/                    governance decisions about Ledger itself
-  domains/<domain>/<unit>/
-    _unit.md               type, status, priority, source links, components
-    ledger.md               append-only dated history
+  domains/
+    business/<unit>/
+    personal/<career|health|nutrition|relationships|sport>/<unit>/
+    projects/<unit>/
+      _unit.md             type, status, priority, urgency, disputed, source links, components
+      ledger.md            append-only dated history
   reviews/                 optional daily/weekly rollups, empty until used
   _index.md                 rolled-up view across every unit
 ```
@@ -41,11 +44,13 @@ LEDGER/
 
 | Field | Values | Notes |
 |---|---|---|
-| `domain` | business, projects, health, sport, nutrition, relationships, career, ... | open-ended, add more as needed |
+| `domain` | business, personal (career, health, nutrition, relationships, sport), projects, ... | open-ended, add more as needed; `personal` nests its own sub-domains |
 | `unit` | free text (matches folder name) | |
 | `type` | goal \| plan \| sprint \| milestone \| maintenance | see `guidelines/workflow.md` for how each moves through the loop |
-| `status` | active \| paused \| blocked \| dormant \| done \| ended \| disputed | canonical set, see `guidelines/project-standard.md` — independent of priority |
-| `priority` | critical \| high \| medium \| low \| optional | canonical set, see `guidelines/project-standard.md` — real-world stakes, not progress or activity |
+| `status` | active \| blocked \| dormant \| ended | canonical set, see `guidelines/project-standard.md` — lifecycle state, independent of priority and urgency |
+| `priority` | high \| medium \| low | canonical set, see `guidelines/project-standard.md` — real-world stakes/importance, not progress or activity |
+| `urgency` | high \| medium \| low | canonical set, see `guidelines/project-standard.md` — time-sensitivity, independent of priority (Eisenhower-style split: important vs. time-sensitive are different questions) |
+| `disputed` | true \| absent | optional flag, not part of `status` — set when the record itself is contested/unresolved, independent of the other three axes |
 | `source` | path(s) / URL(s) | where the real thing lives — never duplicated here |
 | `last_updated` | date | of the most recent ledger entry |
 | `components` | structured block, optional | see `guidelines/tracking-protocol.md` |
@@ -54,8 +59,8 @@ LEDGER/
 
 ## Current scope (be honest about this)
 
-Right now, Ledger is a simple tracking tool for git-backed projects, plus reading and summarizing whatever docs/specs exist. It has no automation, no scheduled checks, no live data feed, no notifications — those are `ROADMAP.md` items, not current behavior. Two domains (business, projects) are populated; five (health, sport, nutrition, relationships, career) are scaffolded and empty. That's the honest current state, not a gap to apologize for.
+Right now, Ledger is a simple tracking tool for git-backed projects, plus reading and summarizing whatever docs/specs exist. It has no automation, no scheduled checks, no live data feed, no notifications — those are `ROADMAP.md` items, not current behavior. Two top-level domains (business, projects) have real units; `personal` (career, health, nutrition, relationships, sport) is scaffolded and empty. That's the honest current state, not a gap to apologize for.
 
 ## Version
 
-See `CHANGELOG.md`. Current: v0.3.
+See `CHANGELOG.md`. Current: v0.4.

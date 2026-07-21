@@ -4,8 +4,9 @@ unit: ledger
 type: maintenance
 status: active
 priority: medium
+urgency: medium
 started: 2026-07-14
-last_updated: 2026-07-21 (v0.3 — status/priority vocabulary, portable guidelines, checklists)
+last_updated: 2026-07-21 (v0.4 — domain restructure, status/priority/urgency vocabulary v2)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
@@ -30,7 +31,13 @@ This framework never writes, edits, or otherwise modifies any file in a tracked 
 
 ## Versioning (from v0.2)
 
-Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.3**. v0.1 applied retroactively to everything before the guideline system existed.
+Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.4**. v0.1 applied retroactively to everything before the guideline system existed.
+
+## v0.4 (2026-07-21) — domain restructure, vocabulary v2
+
+David asked for two changes on review. First: nest the personal-life domains (career, health, nutrition, relationships, sport) under a new top-level `personal` domain, alongside `business` and `projects` — the flat list of seven domains was starting to blur "areas of a life" with "areas of work." Second, and larger: he questioned whether the v0.3 vocabulary was actually as clean as it claimed. `dormant` and `paused` were too similar to justify separately; same for `done` and `ended`; `disputed` wasn't clearly a status at all, more like a flag about the record itself; `critical` didn't reflect how priority is actually used ("we only recognize 3 levels"); and — the sharpest point — priority alone can't express "urgent but low priority" vs. "urgent and high priority," which are genuinely different situations, or the reverse case of a high-priority item that can still wait (a visual refactor was his example).
+
+Resolved: `status` collapsed to `active | blocked | dormant | ended` (paused folded into dormant, done folded into ended — the success-or-not nuance moves to ledger prose instead of a dedicated value). `priority` collapsed to `high | medium | low` (critical dropped, optional folded into low). `disputed` pulled out of the status enum entirely, now an independent optional flag. New `urgency` field added as a third independent axis (`high | medium | low`), explicitly separate from priority — an Eisenhower-style importance-vs-time-sensitivity split. Applied across `guidelines/project-standard.md`, `workflow.md`, `checklists.md`, `SPEC.md`'s schema table, `README.md`, and every existing unit (SkinThea's `optional` → `low`; urgency added everywhere, each value flagged as Ledger's proposed read pending David's confirmation, same pattern used for priority in v0.3). Recorded as ADR-0005.
 
 ## Guideline system — done (2026-07-21, ADR-0003), extended same day (ADR-0004)
 

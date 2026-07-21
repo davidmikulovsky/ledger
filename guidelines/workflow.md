@@ -24,7 +24,7 @@
 
 Different unit types move through this loop differently, and that's expected — it maps onto the `type` field units already carry:
 
-- **`sprint` / `milestone` / `goal`** units have a real End — the loop terminates, the unit's status moves to `done`.
+- **`sprint` / `milestone` / `goal`** units have a real End — the loop terminates, the unit's status moves to `ended`. Whether it got there or was discontinued is worth a line in the ledger entry, not a separate status value.
 - **`maintenance`** units — most relationships, most ongoing businesses, most open-ended personal or hobby projects — never hit End by design. They cycle Work → Check → Update indefinitely, or sit idle between cycles (`dormant`, not broken — see the status vocabulary in `project-standard.md`). "New Version" for these might just mean "the next thing worth doing," not a formal release.
 - **`plan`** units might not have real Work yet — they can sit at Start/planning for a long time before anything downstream happens, and that's a normal state, not a stall.
 

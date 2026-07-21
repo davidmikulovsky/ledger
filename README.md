@@ -10,12 +10,14 @@ domains/<domain>/<unit>/
   ledger.md     ← append-only dated log of what happened, in your own words or mine
 ```
 
-- **domain** = a broad area: business, projects, health, sport, nutrition, relationships, career — add more anytime, nothing about the design assumes this list is final.
+- **domain** = a broad area, nested one level deep: `business`, `personal` (with `career`, `health`, `nutrition`, `relationships`, `sport` underneath), `projects` — add more anytime, nothing about the design assumes this list is final.
 - **unit** = a specific thing within that domain: a project, a venture, a person, a workout block, a recipe collection. Units can nest (e.g. `business/egraine/ventures/medex-beauty-clinic`) when one thing has sub-things.
 - **_unit.md** front-matter fields:
   - `type`: goal | plan | sprint | milestone | maintenance — pick whatever fits; maintenance = ongoing, no finish line (most relationships, most business operations).
-  - `status`: active | paused | done | dormant | blocked
-  - `priority`: high | medium | low
+  - `status`: active | blocked | dormant | ended — current lifecycle state.
+  - `priority`: high | medium | low — real-world stakes/importance, independent of status.
+  - `urgency`: high | medium | low — time-sensitivity, independent of priority (a high-priority project can be low urgency if it can wait; a low-priority project can still be urgent).
+  - `disputed`: optional flag (true/absent) — set when a project's record itself is contested or unresolved; independent of status, priority, and urgency.
   - `source`: path(s) to where the real content/data lives (a git repo, a folder of docs, a spreadsheet) — this framework links to it, doesn't duplicate it.
   - `last_updated`: date of the most recent ledger entry.
   - `components`: optional structured block (git/docs/changelog/live-artifact status, each with a verification date) — see `guidelines/tracking-protocol.md`.

@@ -28,29 +28,32 @@ None of the below needs to exist on day one. All of it earns its place as the pr
 
 A new project will be missing most of this, and that's expected, not a problem to fix immediately. The standard exists so that *when* something is written, it lands somewhere predictable — not to gate a project from starting until it's fully documented. Everything on this list except git should be read as "not yet present," a normal and unremarkable state, not a defect.
 
-## Priority and status: two independent axes
+## Status, priority, and urgency: three independent axes (plus a disputed flag)
 
-These often get collapsed into one idea — "important" and "active" start to feel like the same thing — but they answer different questions and should be tracked separately.
+These often get collapsed into one idea — "important," "active," and "urgent" start to feel like the same thing — but they answer three different questions and should be tracked separately.
 
-**Priority** answers: *how much does this matter, if left unattended?* It's about real-world stakes and urgency, not progress. A project can be extremely far along and still low priority (nothing depends on it right now), or brand new and critical (a real deadline, a real consequence if it slips).
-
-- `critical` — time-sensitive, real consequences if neglected right now.
-- `high` — matters a lot, real ongoing stakes.
-- `medium` — matters, no urgent deadline.
-- `low` — real, but limited stakes. A project can get plenty of active attention and still sit here — priority isn't a measure of effort or activity, just of what's riding on it. A well-worked personal or hobby project with no dependents and no revenue behind it is a clean example: real, current, cared-for, and still legitimately low priority.
-- `optional` — explicitly backlog/someday. Not scheduled, not abandoned, just not now.
-
-**Status** answers: *what's actually happening with it right now?* It's about current lifecycle state, independent of how much it matters.
+**Status** answers: *what's actually happening with it right now?* Current lifecycle state, independent of how much it matters or how soon it needs attention.
 
 - `active` — real work happening now, or expected imminently.
-- `paused` — stopped, with clear intent to resume.
 - `blocked` — stalled on something outside the project's own control — a decision, a dependency, another party.
-- `dormant` — no current work and no near-term plan, but not closed. Could restart anytime, nobody's actively planning to.
-- `done` — reached its goal. Applies naturally to project types with a real endpoint (a goal, a sprint, a milestone).
-- `ended` — deliberately discontinued or closed, regardless of whether it succeeded. Different from `done`: `done` means it got there, `ended` means work on it stopped.
-- `disputed` — the *tracked information itself* is in conflict or unresolved — not a statement about the project's real-world activity, but a flag that what's recorded here shouldn't be trusted until sorted out.
+- `dormant` — no current work and no clear intent to resume right now, but not closed. Covers both "paused, will pick back up" and "no near-term plan" — that distinction matters less than whether it's genuinely closed, and belongs in prose/ledger notes if worth saying, not a separate status value.
+- `ended` — work on it has stopped for good, regardless of outcome — whether it reached its goal or was discontinued. Whether it succeeded is worth a line in the ledger; it doesn't need its own status value.
 
-Keeping these as two small, separate enumerations (rather than one combined field, or free text) is deliberate: it's what makes a project sortable and visualizable along either axis independently later — "what's urgent" and "what's active" are genuinely different questions and deserve different answers.
+**Priority** answers: *how much does this matter?* Real-world stakes and importance, not progress, not how soon.
+
+- `high` — matters a lot, real ongoing stakes.
+- `medium` — matters, no outsized stakes either way.
+- `low` — real, but limited stakes. A project can get plenty of active attention and still sit here — priority isn't a measure of effort or activity, just of what's riding on it. A well-worked personal or hobby project with no dependents and no revenue behind it is a clean example: real, current, cared-for, and still legitimately low priority. Backlog/someday ideas belong here too, not in a separate tier — low priority already covers "not now."
+
+**Urgency** answers: *how soon does this need attention?* Time-sensitivity, independent of priority — an Eisenhower-matrix split between "important" and "urgent," which are genuinely different questions with genuinely different answers. A high-priority project can be low urgency (a visual refactor that matters but can wait); a low-priority project can still be urgent (something small but time-boxed). Urgent-and-low-priority and urgent-and-high-priority are different situations that call for different responses, which is exactly why this needs to be its own field rather than folded into priority.
+
+- `high` — needs attention soon; delay has a near-term cost.
+- `medium` — should get attention in a normal timeframe, no immediate deadline.
+- `low` — no time pressure; can wait indefinitely without cost.
+
+**Disputed** is not a status value — it's a separate optional flag (`disputed: true`, omitted otherwise). It answers a different question again: *is the tracked information itself in conflict or unresolved?* That's orthogonal to whether the project is active/blocked/dormant/ended, to how much it matters, and to how soon it needs attention — a project can be disputed while simultaneously being active and high priority. Keeping it a separate flag rather than a status value means it can be layered onto whatever the real status is instead of overwriting it.
+
+Keeping these as small, independent fields (rather than one combined field, or free text) is deliberate: it's what makes a project sortable and visualizable along any one axis later without the others bleeding into it.
 
 ## A living reference
 

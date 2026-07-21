@@ -5,8 +5,9 @@ parent_unit: business/egraine
 type: goal
 status: dormant
 priority: low
+urgency: low
 started: unknown — dormant since before this review
-last_updated: 2026-07-14
+last_updated: 2026-07-21 (vocabulary v2 — urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/01-Docs/Strategy-Plans/Egraine_Oy_Strategic_Plan.docx"
@@ -23,3 +24,7 @@ Explicitly out of scope for the current 12-month strategic plan. Plan language: 
 ## Why this is in the index at all
 
 So it doesn't get forgotten between now and the "revisit after Q2" checkpoint — that's really the only action item here: remember to raise it again around Q2/Q3.
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: low` — explicitly deferred to "after Q2" by the strategic plan itself; no action needed before then. Confirm or correct.

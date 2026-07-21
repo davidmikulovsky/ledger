@@ -5,8 +5,9 @@ parent_unit: business/egraine
 type: sprint
 status: active
 priority: high
+urgency: medium
 started: 2026-07-08
-last_updated: 2026-07-14
+last_updated: 2026-07-21 (vocabulary v2 — urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/01-Docs"
@@ -37,3 +38,7 @@ Renamed from "Egraine Operations" — that name undersold what this actually is:
 ## Not this unit
 
 Social media & content (Pillar 2, not started) and the broader B2B document set (Pillar 3, mostly done — tracked at the parent Egraine unit level) are separate threads, not part of this website rebuild.
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: medium` — real open gaps (unreviewed legal pages, unwired contact form) that block full launch confidence, but no hard external deadline forcing this week. Flagging this as a genuine judgment call rather than an obvious read — could reasonably be `high` if you're targeting a near-term launch date not captured in the sources reviewed. Confirm or correct.

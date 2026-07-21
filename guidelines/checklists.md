@@ -35,6 +35,6 @@
 
 ## End (or New Version)
 
-- [ ] If this is a real end: status set honestly to `done` (the goal was reached) or `ended` (work stopped, regardless of outcome) — these mean different things, pick the one that's actually true.
+- [ ] If this is a real end: status set to `ended`, and the ledger entry says plainly whether it got there or was discontinued — that nuance lives in the entry, not in a separate status value.
 - [ ] If continuing into a new version: a changelog entry added, a version marker bumped if this project uses one.
 - [ ] Either way, a closing or transition note exists somewhere real — a changelog line, a final commit message, a decision log entry — so the reason isn't only in someone's memory six months from now.

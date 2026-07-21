@@ -2,30 +2,33 @@
 
 Rolled-up view across every domain. Regenerate by asking any time ("update the index") — it's derived from each unit's `_unit.md`, not maintained separately by hand.
 
-_Last generated: 2026-07-21 (v8 — canonical status/priority vocabulary, ADR-0004; guideline docs made portable; checklists added)_
+_Last generated: 2026-07-21 (v0.4 — `personal` domain nesting; status/priority simplified, urgency added, ADR-0005)_
 
-| Domain | Unit | Type | Status | Priority | Last updated |
-|---|---|---|---|---|---|
-| business | egraine (parent, 4-pillar strategy) | maintenance | active | high | 2026-07-14 |
-| business | egraine / medex-beauty-clinic | sprint | active | high | 2026-07-14 |
-| business | egraine / thann | maintenance | active | medium | 2026-07-14 |
-| business | egraine / eden-eva | goal | dormant | low | 2026-07-14 |
-| business | egraine / skinthea | goal | dormant | optional | 2026-07-21 |
-| business | egraine / egraine-website-rebuild | sprint | active | high | 2026-07-14 |
-| projects | jascandi | maintenance | active | low | 2026-07-21 |
-| projects | ledger (this framework, v0.3) | maintenance | active | medium | 2026-07-21 |
-| health | — | — | no units yet | — | — |
-| sport | — | — | no units yet | — | — |
-| nutrition | — | — | no units yet | — | — |
-| relationships | — | — | no units yet | — | — |
-| career | — | — | no units yet | — | — |
+| Domain | Unit | Type | Status | Priority | Urgency | Last updated |
+|---|---|---|---|---|---|---|
+| business | egraine (parent, 4-pillar strategy) | maintenance | active | high | medium | 2026-07-21 |
+| business | egraine / medex-beauty-clinic | sprint | active | high | high | 2026-07-21 |
+| business | egraine / thann | maintenance | active | medium | low | 2026-07-21 |
+| business | egraine / eden-eva | goal | dormant | low | low | 2026-07-21 |
+| business | egraine / skinthea | goal | dormant | low | low | 2026-07-21 |
+| business | egraine / egraine-website-rebuild | sprint | active | high | medium | 2026-07-21 |
+| projects | jascandi | maintenance | active | low | low | 2026-07-21 |
+| projects | ledger (this framework, v0.4) | maintenance | active | medium | medium | 2026-07-21 |
+| personal / career | — | — | no units yet | — | — | — |
+| personal / health | — | — | no units yet | — | — | — |
+| personal / nutrition | — | — | no units yet | — | — | — |
+| personal / relationships | — | — | no units yet | — | — | — |
+| personal / sport | — | — | no units yet | — | — | — |
+
+Urgency values marked "proposed" in each unit's own `_unit.md` are Ledger's first read, not yet confirmed by David — same review pattern as priority.
 
 ## Governance
 
-Decisions about Ledger itself live in `adr/` as ADRs (currently 4 — read-only boundary, local hosting, project-standard/tracking-protocol, status/priority vocabulary). How Ledger operates day to day is written down in `guidelines/` (`project-standard.md` — including the canonical `status`/`priority` vocabulary — `tracking-protocol.md`, `workflow.md`, `checklists.md`), written to be usable outside Ledger's own scope. Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.3) / `ROADMAP.md`.
+Decisions about Ledger itself live in `adr/` as ADRs (currently 5 — read-only boundary, local hosting, project-standard/tracking-protocol, status/priority vocabulary v1, domain restructure + vocabulary v2). How Ledger operates day to day is written down in `guidelines/` (`project-standard.md` — including the canonical `status`/`priority`/`urgency` vocabulary — `tracking-protocol.md`, `workflow.md`, `checklists.md`), written to be usable outside Ledger's own scope. Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.4) / `ROADMAP.md`.
 
 ## Needs your call directly (not just execution)
 
+- **Urgency values across every unit** are Ledger's proposed first read (see each `_unit.md`'s "Urgency — proposed" section) — confirm or correct, same as priority was in v0.3.
 - **Medex / Egraine hosting:** the pattern of "turn their docs folders into git repos, push to GitHub" is still logged as a want, but per ADR-0001 it can't happen as something Ledger initiates on its own — it would mean Ledger modifying those projects' own folders. Whenever you want this done, ask for it as its own explicit task, separate from tracking.
 - **Eden's Eva** — dormant asset (edenseva.com), park with a holding page or scope a relaunch — deferred to "revisit after Q2" per the strategic plan, so no action needed yet, just don't forget it.
 - **Medex:** publish the "active draft" Shopify theme to make the navy contact-button fix live; paste the drafted homepage meta description; configure the medexbeautyclinic.com DNS redirect.

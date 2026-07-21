@@ -4,8 +4,9 @@ unit: jascandi
 type: maintenance
 status: active
 priority: low
+urgency: low
 started: 2026 (v1), v2.1 as of July 2026
-last_updated: 2026-07-21 (canonical location confirmed)
+last_updated: 2026-07-21 (vocabulary v2 — urgency added)
 source:
   - "/Users/mklvsky/AI/PROJECTS/Jascandi/web (git repo, origin: github.com/davidmikulovsky/jascandi) — confirmed canonical 2026-07-21, working tree clean, HEAD b905b08"
   - "Google Drive: Projects/jascandi-backup-2026-07-21-v2.zip — snapshot backup, David's own copy, not read by Ledger"
@@ -80,3 +81,7 @@ These are two separate axes, not one combined read, and that distinction resolve
 - **`priority: low`** — set by Ledger, per David's explicit direction to review: not because the project is unfinished or neglected, but because there's no real business or client stakes behind it yet. It's a well-maintained hobby project, and that's a perfectly coherent combination — active *and* low priority, not a contradiction. Was previously invented as `dormant-capable`, a hedge that tried to encode both axes into one field; the real fix was separating them, not finding a better single word.
 
 Priority here is a starting call for David to confirm or correct, per the review step in `guidelines/checklists.md` — not a final judgment.
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: low` — no open deadline, no client waiting; "v2.2 — complete as of July 2026" per its own changelog. Same low-stakes-but-active read as priority, on a different axis: nothing about this needs attention *soon*, distinct from how much it matters. Confirm or correct.

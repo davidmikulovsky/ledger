@@ -4,9 +4,10 @@ unit: skinthea
 parent_unit: business/egraine
 type: goal
 status: dormant
-priority: optional
+priority: low
+urgency: low
 started: idea formed, not started
-last_updated: 2026-07-21 (status vocabulary aligned)
+last_updated: 2026-07-21 (vocabulary v2 — priority optional→low, urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
 ---
@@ -27,4 +28,4 @@ Separately: the **Uriage** partnership (also dropped from the same page) is unre
 
 ## Status going forward
 
-`status: dormant`, `priority: optional` — deliberately outside the active 4-pillar roadmap. (Relabeled from the invented `hibernated` to the canonical `dormant` on 2026-07-21, per `guidelines/project-standard.md`'s status vocabulary — same meaning, standard term: no current work, no near-term plan, not closed.) Revisit if resources free up or a specific brand partner comes into view. No action needed until then.
+`status: dormant`, `priority: low`, `urgency: low` — deliberately outside the active 4-pillar roadmap. (Relabeled from the invented `hibernated` to the canonical `dormant` on 2026-07-21; `priority` moved from the retired `optional` tier to `low` the same day when the priority scale was simplified to three levels — same meaning, `low` already covers "not now, real but limited stakes.") Revisit if resources free up or a specific brand partner comes into view. No action needed until then.

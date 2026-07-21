@@ -2,6 +2,20 @@
 
 *Plain-language version history of Ledger itself — what changed and when, not why (that's `adr/`) and not what's happening in tracked projects (that's each unit's own `ledger.md`). Newest first.*
 
+## v0.4 — 2026-07-21
+
+Domain structure changed: `career`, `health`, `nutrition`, `relationships`, `sport` nested under a new top-level `personal` domain — top level is now `business` / `personal` / `projects` instead of seven flat domains.
+
+Vocabulary redesigned after review. `status` collapsed from 7 values to 4: `active | blocked | dormant | ended`. `paused` merged into `dormant` (both meant "not moving right now, not closed" — the distinction wasn't earning its keep). `done` merged into `ended` (whether a thing reached its goal or was discontinued is now a line in the ledger entry, not a separate status value). `disputed` removed from the status enum entirely and reintroduced as an independent optional flag (`disputed: true`), since it answers a different question ("is the record itself trustworthy") that's orthogonal to lifecycle state.
+
+`priority` collapsed from 5 values to 3: `high | medium | low`. `critical` dropped — "we only recognize 3 levels." `optional` folded into `low`, which already covers "real but limited stakes, not scheduled."
+
+New `urgency` field added as a third independent axis, `high | medium | low`, distinct from priority: priority is "how much does this matter," urgency is "how soon does it need attention." An Eisenhower-style split, added because priority alone couldn't express that "urgent but low priority" and "urgent and high priority" are different situations, or that a high-priority item (e.g. a visual refactor) can still be low urgency.
+
+Applied across `guidelines/project-standard.md`, `workflow.md`, `checklists.md`, `SPEC.md`'s schema table, `README.md`, and every existing unit — `urgency` added to each with a proposed value flagged for review, same pattern used for `priority` in v0.3.
+
+Recorded as ADR-0005.
+
 ## v0.3 — 2026-07-21
 
 Canonical `status` and `priority` vocabularies defined in `guidelines/project-standard.md`, as two deliberately independent axes: `priority` (real-world stakes — critical/high/medium/low/optional) answers "how much does this matter," `status` (active/paused/blocked/dormant/done/ended/disputed) answers "what's happening right now." Designed explicitly to support future visualization by either axis (see `ROADMAP.md`). Two units' invented, non-canonical status values corrected: Jascandi's `dormant-capable` → `active` (priority stays `low` — active and low-priority isn't a contradiction, it's a hobby project with no real business stakes, exactly the case that prompted this change) and SkinThea's `hibernated` → `dormant` (same meaning, standard term).

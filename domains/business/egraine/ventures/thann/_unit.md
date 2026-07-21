@@ -5,8 +5,9 @@ parent_unit: business/egraine
 type: maintenance
 status: active
 priority: medium
+urgency: low
 started: physical spa dissolved 2026-07-08; now online-only
-last_updated: 2026-07-14
+last_updated: 2026-07-21 (vocabulary v2 — urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
   - "thann.fi (site, status unclear — not directly inspected)"
@@ -27,3 +28,7 @@ thann.fi itself hasn't been directly inspected in this review — everything abo
 ## What would sharpen this unit
 
 A direct look at thann.fi itself (current content, e-commerce functionality, gift card flow) — nothing in the reviewed sources describes its actual current build state, only its business model.
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: low` — no known open action items or near-term deadline; site hasn't even been directly inspected yet, which itself signals nothing pressing is riding on it right now. Confirm or correct.

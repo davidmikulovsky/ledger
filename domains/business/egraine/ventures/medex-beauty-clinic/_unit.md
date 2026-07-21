@@ -5,8 +5,9 @@ parent_unit: business/egraine
 type: sprint
 status: active
 priority: high
+urgency: high
 started: 2026-07-10
-last_updated: 2026-07-14
+last_updated: 2026-07-21 (vocabulary v2 — urgency added)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/Medex/01_Decision Log/Decision Log.md"
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/Medex/02_Tasks & Roadmap/Task Tracker.md"
@@ -42,3 +43,7 @@ PageSpeed (2026-07-10): homepage 68/69 Perf desktop/mobile, 54 Best Practices bo
 ## Working theme state (see D-011)
 
 Live: "Reformation 15.0.0 (working copy) - July 2026". Active draft for new edits: "Reformation 15.0.0 (active draft)", id 201006907740 (contains the unpublished navy contact-button fix, D-016).
+
+## Urgency — proposed 2026-07-21, for your review
+
+`urgency: high` — live client-facing store, mid-sprint with real unfinished action items (manual publish + DNS + meta description) blocking sprint close. Confirm or correct.
