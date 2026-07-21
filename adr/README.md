@@ -11,4 +11,4 @@ Format: numbered, short title, Status (Accepted / Superseded / Proposed), Contex
 
 ## Not yet backfilled
 
-Several earlier decisions predate this ADR log and only exist in the `projects/life-os` unit ledger: the original framework design (domain/unit/ledger pattern), the SkinThea disputed-then-resolved status, and the pending framework rebrand (dropping "life tracking" framing). Happy to backfill any of these as formal ADRs if useful — otherwise they stay as ledger entries, which is a reasonable place for them too.
+Several earlier decisions predate this ADR log and only exist in the `projects/ledger` unit ledger: the original framework design (domain/unit/ledger pattern), the SkinThea disputed-then-resolved status, and the framework's own rename from "life-os" to "Ledger" (2026-07-21, done — see that unit's ledger). Happy to backfill any of these as formal ADRs if useful — otherwise they stay as ledger entries, which is a reasonable place for them too.

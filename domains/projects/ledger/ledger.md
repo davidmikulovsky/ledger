@@ -1,8 +1,10 @@
-# life-os — ledger
+# Ledger (framework) — ledger
 
-Newest first.
+Newest first. Named "life-os" until 2026-07-21 — kept as-is in entries below rather than retroactively edited, per the append-only principle.
 
 ---
+**2026-07-21 (later)** — Framework renamed from "life-os" to **Ledger**, dropping the "life tracking" framing for a project-tracking one that doesn't presuppose scope. Applied to README.md, root `_index.md`, and this unit — folder renamed `domains/projects/life-os` → `domains/projects/ledger`. Other units' historical ledger entries mentioning "life-os" left untouched.
+
 **2026-07-21** — Returned after a gap. Two folder-access changes handled: old pen drive was disconnected from the session, a new persistent local folder (`/Users/mklvsky/AI/LIFE_OS`) was granted — turned out David had already migrated the content there himself; reconnected the pen drive too and diffed `git log` between both to confirm all 5 commits are byte-identical, nothing lost. Established a proper ADR log (`adr/`) for decisions about the framework itself, starting with two: read-only boundary on tracked projects (now a hard, explicit rule rather than an accidental practice) and local-only storage/hosting (supersedes the 2026-07-15 GitHub-private plan). Rebrand from "life tracking framework" to a scope-agnostic project-tracking framing requested — naming in progress, not yet applied to files.
 
 **2026-07-15 (later)** — Hosting decision finalized: **GitHub private**, not self-hosted, for now. Worked through the actual risk chain — the original bare-git-on-Coolify-VPS idea doesn't isolate from Coolify's own demonstrated critical-RCE history since Coolify already runs on that box for Jascandi; a full Gitea/Forgejo stack adds a second DIY-patched CVE layer on top; a truly isolated second VPS would work but isn't worth new infrastructure right now. Decision: keep Medex/Egraine decision logs and task trackers on GitHub private (same pattern as Jascandi already uses), 2FA required, revisit self-hosting when company growth justifies owning dedicated infrastructure. Concrete next step (not yet done): turn Medex's and Egraine's docs folders into real git repos and push to private GitHub repos.

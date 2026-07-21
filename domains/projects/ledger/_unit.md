@@ -1,18 +1,18 @@
 ---
 domain: projects
-unit: life-os
+unit: ledger
 type: maintenance
 status: active
 priority: medium
 started: 2026-07-14
-last_updated: 2026-07-21 (migrated to persistent local storage; ADR log established)
+last_updated: 2026-07-21 (renamed from life-os to Ledger)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
 
-# life-os (this framework, tracking itself)
+# Ledger (this framework, tracking itself)
 
-Naming note (2026-07-21): "life-os" is being retired as the framework's public name — see ledger — pending David's pick from proposed alternatives. This unit's folder path/id stays `life-os` for continuity until the rename is finalized everywhere at once, to avoid half-renamed references.
+Renamed 2026-07-21 from "life-os" to "Ledger" — dropping the "life tracking" framing in favor of a project-tracking framing that doesn't presuppose scope. Folder renamed `domains/projects/life-os` → `domains/projects/ledger` in the same commit. Old name kept in historical ledger entries and other units' ledgers unedited, per the append-only principle — this is a forward-facing rename, not a rewrite of history.
 
 The tracking framework itself, treated as a project with its own progress worth tracking — same pattern as everything else in here, applied reflexively. This unit gives its own backlog (mostly infrastructure work, not content) a place in the index so it doesn't get lost among the domains it tracks.
 
@@ -30,7 +30,7 @@ This framework never writes, edits, or otherwise modifies any file in a tracked 
 
 ## Open backlog for the framework itself
 
-- **Rebrand, in progress (2026-07-21):** dropping "life tracking" / "life-os" framing in favor of a project-tracking framing that doesn't presuppose scope (apps, design, research, business, lifestyle — anything). Naming options being drafted; not yet finalized or applied to files.
+- **Rebrand — done (2026-07-21):** now "Ledger." Applied to README.md, `_index.md`, and this unit (renamed from `life-os`).
 - **Hosting — decided 2026-07-21 (ADR-0002), supersedes the 2026-07-15 GitHub-private plan:** local git only, on persistent storage, no remote. Revisit if an off-device backup need becomes real.
   - Note: the earlier "turn Medex/Egraine's docs folders into git repos, push to GitHub" plan is now in tension with ADR-0001 if read literally — doing that *as part of this framework's operation* would mean this framework modifying those projects' own folders. Treat any future work like that as a separate, explicit, user-directed task on that project — not something this framework initiates on its own.
 - `_index.md` regeneration is currently manual (I rewrite it by hand when asked) — flagged earlier as a later automation step once the unit count grows. Still true, still deferred.
