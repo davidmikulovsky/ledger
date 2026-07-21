@@ -2,7 +2,7 @@
 
 Rolled-up view across every domain. Regenerate by asking any time ("update the index") — it's derived from each unit's `_unit.md`, not maintained separately by hand.
 
-_Last generated: 2026-07-21 (v6 — renamed life-os → Ledger; migrated to persistent local storage; ADR log established)_
+_Last generated: 2026-07-21 (v7 — guideline system + versioning, ADR-0003; Jascandi canonical location + live verification)_
 
 | Domain | Unit | Type | Status | Priority | Last updated |
 |---|---|---|---|---|---|
@@ -12,8 +12,8 @@ _Last generated: 2026-07-21 (v6 — renamed life-os → Ledger; migrated to pers
 | business | egraine / eden-eva | goal | dormant | low | 2026-07-14 |
 | business | egraine / skinthea | goal | hibernated | optional | 2026-07-15 |
 | business | egraine / egraine-website-rebuild | sprint | active | high | 2026-07-14 |
-| projects | jascandi | maintenance | dormant-capable | low | 2026-07-14 |
-| projects | ledger (this framework, formerly "life-os") | maintenance | active | medium | 2026-07-21 |
+| projects | jascandi | maintenance | dormant-capable | low | 2026-07-21 |
+| projects | ledger (this framework, v0.2) | maintenance | active | medium | 2026-07-21 |
 | health | — | — | no units yet | — | — |
 | sport | — | — | no units yet | — | — |
 | nutrition | — | — | no units yet | — | — |
@@ -22,7 +22,7 @@ _Last generated: 2026-07-21 (v6 — renamed life-os → Ledger; migrated to pers
 
 ## Governance
 
-Decisions about Ledger itself (not about any tracked project) live in `adr/` as ADRs. Currently: ADR-0001 (read-only boundary — Ledger never writes to a tracked project's own source, only reads it) and ADR-0002 (local-only git storage, no remote, for now).
+Decisions about Ledger itself live in `adr/` as ADRs (currently 3 — read-only boundary, local hosting, project-standard/tracking-protocol). How Ledger operates day to day is now written down in `guidelines/` (`project-standard.md`, `tracking-protocol.md`, `workflow.md`), and Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.2) / `ROADMAP.md`.
 
 ## Needs your call directly (not just execution)
 

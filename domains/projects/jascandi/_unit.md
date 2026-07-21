@@ -9,6 +9,39 @@ last_updated: 2026-07-21 (canonical location confirmed)
 source:
   - "/Users/mklvsky/AI/PROJECTS/Jascandi/web (git repo, origin: github.com/davidmikulovsky/jascandi) — confirmed canonical 2026-07-21, working tree clean, HEAD b905b08"
   - "Google Drive: Projects/jascandi-backup-2026-07-21-v2.zip — snapshot backup, David's own copy, not read by Ledger"
+components:
+  git:
+    present: true
+    path: "/Users/mklvsky/AI/PROJECTS/Jascandi/web"
+    remote: "github.com/davidmikulovsky/jascandi"
+    branch: "main"
+    head: "b905b08"
+    working_tree: "clean"
+    verified: "2026-07-21"
+    how: "git log/status, direct"
+  readme:
+    present: true
+    verified: "2026-07-21"
+    how: "read"
+  docs:
+    present: true
+    location: "docs/ (business: manifesto, operations, services) + technical/ (project/technical: jascandi-reference, networking, changelog, workflow)"
+    verified: "2026-07-21"
+    how: "read"
+  changelog:
+    present: true
+    location: "technical/changelog.md"
+    verified: "2026-07-21"
+    how: "read"
+  decision_log:
+    present: false
+    note: "changelog + git history covering this role so far; no separate decision log/ADR exists"
+  live_artifact:
+    present: true
+    url: "https://jascandi.com"
+    status: "live"
+    verified: "2026-07-21"
+    how: "fetched directly"
 ---
 
 # Jascandi

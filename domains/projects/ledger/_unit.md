@@ -5,7 +5,7 @@ type: maintenance
 status: active
 priority: medium
 started: 2026-07-14
-last_updated: 2026-07-21 (renamed from life-os to Ledger)
+last_updated: 2026-07-21 (v0.2 — guideline system + versioning)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
@@ -27,6 +27,14 @@ The tracking framework itself, treated as a project with its own progress worth 
 ## Hard rule, now enforced (ADR-0001)
 
 This framework never writes, edits, or otherwise modifies any file in a tracked project's own source location — only reads it. Corrections apply only to this framework's own files. Verified retroactively that this was already true in practice for every past correction (e.g. the Egraine rebuild) before being made an explicit rule. See `adr/0001-read-only-boundary-on-tracked-projects.md` for the full record.
+
+## Versioning (from v0.2)
+
+Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.2**. v0.1 applied retroactively to everything before the guideline system existed.
+
+## Guideline system — done (2026-07-21, ADR-0003)
+
+Three documents at `guidelines/`: `project-standard.md` (what a tracked project should contain — git as the one hard requirement), `tracking-protocol.md` (how Ledger checks a project, including the claimed-vs-verified discipline learned directly from the Jascandi live-fetch check, and a new structured `components` schema in `_unit.md`), `workflow.md` (Start → Work → Check → Update → End/New-Version loop, mapped to the existing `type` field, offered as adaptable not mandatory). Piloted `components` on Jascandi immediately using data already verified the same day, rather than leaving it theoretical.
 
 ## Open backlog for the framework itself
 

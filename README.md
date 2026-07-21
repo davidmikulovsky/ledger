@@ -18,7 +18,18 @@ domains/<domain>/<unit>/
   - `priority`: high | medium | low
   - `source`: path(s) to where the real content/data lives (a git repo, a folder of docs, a spreadsheet) — this framework links to it, doesn't duplicate it.
   - `last_updated`: date of the most recent ledger entry.
+  - `components`: optional structured block (git/docs/changelog/live-artifact status, each with a verification date) — see `guidelines/tracking-protocol.md`.
 - **ledger.md** — short dated entries, newest first, never rewritten, just appended to. This is the history and the "what's the status" answer in one place.
+
+## Guidelines
+
+Three companion documents, added 2026-07-21 as tracked units grew past what ad hoc tracking could keep straight:
+
+- **`guidelines/project-standard.md`** — what a tracked project should contain (git is the one hard requirement; everything else — README, docs, changelog — is expected but fine to be missing early on).
+- **`guidelines/tracking-protocol.md`** — how Ledger checks a project against that standard, including the claimed-vs-verified discipline and the `components` schema.
+- **`guidelines/workflow.md`** — the Start → Work → Check → Update → End/New-Version loop a project moves through, offered as a default, not a mandate.
+
+Ledger holds itself to the same standard — see `SPEC.md`, `CHANGELOG.md`, and `ROADMAP.md` (future directions: reporting skills, a live dashboard, notifications — none of it built yet).
 
 ## This folder is not the work
 
