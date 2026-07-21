@@ -31,9 +31,13 @@ v2.2 (2026-07-14) was a real security fix: the `Dockerfile` had been using `COPY
 
 2026-07-21: documentation catch-up pass — added `technical/changelog.md` (plain-language project history, explicitly not a git-log substitute) and `technical/workflow.md` (how to carry a change through build/git/docs without drift), corrected stale "open items" notes in `jascandi-reference.md` that were flagging already-resolved issues (real domain, `og:image` already set), and moved the Switzer font's license text into the repo itself (`licenses/Switzer-FFL.txt`) so it travels with the repo instead of living only in the external `Switzer_Complete/` vendor folder.
 
-## Known cleanup items outside the repo itself (not urgent, from the project's own changelog)
+## Known cleanup items outside the repo itself
 
-A second, separate git repo sits at the project root (`Jascandi/.git`, branch `master`, no remote — the same stray orphan flagged in the 2026-07-21 multi-location git scan). The project's own changelog independently confirms this is a single superseded legacy checkpoint, safe to remove. `Switzer_Complete/` (full font vendor package) and `versions_archive/` (pre-git dated HTML snapshots) sit outside `web/`, not deployed, kept for reference only.
+The stray orphan `.git` at the project root — **resolved, confirmed gone 2026-07-21.** `Switzer_Complete/` (full font vendor package) and `versions_archive/` (pre-git dated HTML snapshots) still sit outside `web/`, not deployed, kept for reference only — no urgency there.
+
+## Live verification (2026-07-21)
+
+Fetched `jascandi.com` directly rather than trusting the docs' claim — confirmed live and correct: page loads, title/meta description match ("Selective partnerships only"), OG/Twitter card tags and image present, canonical URL correct, no internal doc paths exposed (the security fix from v2.2 is holding in production).
 
 ## Is this "active"?
 
