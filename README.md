@@ -25,13 +25,23 @@ domains/<domain>/<unit>/
 
 ## Guidelines
 
-Three companion documents, added 2026-07-21 as tracked units grew past what ad hoc tracking could keep straight:
+The working rules — what a tracked project should contain, how it's checked, the Start → Work → Check → Update loop, and git/access hygiene — are now **canonically maintained in the shared ALFA+OMEGA repo** (git-tagged, currently **v2.0**; see `adr/0010-canonical-guidelines-shared-resources-repo.md`): `project-standard.md`, `tracking-protocol.md`, `workflow.md`, `checklists.md`, and `git-and-access.md`. The copies under `guidelines/` here are superseded pointer-stubs — edit the canonical set in ALFA+OMEGA, not here.
 
-- **`guidelines/project-standard.md`** — what a tracked project should contain (git is the one hard requirement; everything else — README, docs, changelog — is expected but fine to be missing early on).
-- **`guidelines/tracking-protocol.md`** — how Ledger checks a project against that standard, including the claimed-vs-verified discipline and the `components` schema.
-- **`guidelines/workflow.md`** — the Start → Work → Check → Update → End/New-Version loop a project moves through, offered as a default, not a mandate.
+Ledger holds itself to the same standard — see `SPEC.md`, `CHANGELOG.md` (currently v0.6), and `ROADMAP.md`.
 
-Ledger holds itself to the same standard — see `SPEC.md`, `CHANGELOG.md`, and `ROADMAP.md` (future directions: reporting skills, a live dashboard, notifications — none of it built yet).
+## The Ledger toolkit — a built, functional extension
+
+What `ROADMAP.md` first listed as future — a scan engine, keyword gap-finding, a live dashboard — is **now built**, and lives in the shared repo at **`ALFA+OMEGA/skillsets/ledger/`** (Python, standard library only — no install, no internet, no Claude required; Claude just runs the same commands when asked). It reads every unit plus the live git/docs of each tracked project into one `ledger-state.json` snapshot, then reports on it:
+
+```
+python3 /Users/mklvsky/AI/ALFA+OMEGA/skillsets/ledger/ledger.py audit    # full red/amber/green gap report
+python3 …/ledger.py gaps stalling     # filter: urgent | stalling | blocked | drift | nogit | locks | untracked
+python3 …/ledger.py dashboard         # build reports/dashboard.html — open it in a browser
+python3 …/ledger.py doctor <project>  # a compliance catch-up .md for one project
+python3 …/ledger.py stats             # portfolio fun-facts
+```
+
+Outputs go to `ALFA+OMEGA/reports/` (human) and `ALFA+OMEGA/tmp/` (json), both git-ignored. **Full usage, config, and how the dashboard works:** `ALFA+OMEGA/skillsets/ledger/README.md`. Scan-engine design and the health/movement model are recorded in `adr/0011-scan-engine-and-state-model.md`.
 
 ## This folder is not the work
 
