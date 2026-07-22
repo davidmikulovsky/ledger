@@ -64,4 +64,4 @@ Right now, Ledger is a simple tracking tool for git-backed projects, plus readin
 
 ## Version
 
-See `CHANGELOG.md`. Current: v0.4.
+See `CHANGELOG.md`. Current: v0.5.

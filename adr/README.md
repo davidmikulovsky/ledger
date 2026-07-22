@@ -11,6 +11,7 @@ Format: numbered, short title, Status (Accepted / Superseded / Proposed), Contex
 - [0003 — Project standard, tracking protocol, and versioned changelog](0003-project-standard-and-tracking-protocol.md) — written standard for what a tracked project should contain, a formal checking protocol (including the claimed-vs-verified discipline and the `components` data structure), and versioning for Ledger itself, starting at v0.2.
 - [0004 — Status/priority vocabulary and portable guidelines](0004-status-priority-vocabulary-and-universal-guidelines.md) — `status` and `priority` formalized as two independent canonical enumerations (built for future visualization); the three guideline documents rewritten to be usable outside Ledger's own scope; `guidelines/checklists.md` added. **Vocabulary superseded by ADR-0005; portability/checklist decisions still stand.**
 - [0005 — Domain restructure and vocabulary v2](0005-domain-restructure-and-vocabulary-v2.md) — `personal` domain added to nest career/health/nutrition/relationships/sport; `status` simplified to 4 values, `priority` to 3; `disputed` extracted from status into its own flag; new independent `urgency` axis added.
+- [0006 — Ledger admin/reporting skill design](0006-ledger-skill-design.md) — single `ledger` skill, verb grammar (report/sync/log/new/portfolio/audit) and a four-tier report depth ladder (glance/brief/full/audit); design only, not yet packaged or tested.
 
 ## Not yet backfilled
 

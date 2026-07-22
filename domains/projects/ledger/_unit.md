@@ -6,7 +6,7 @@ status: active
 priority: medium
 urgency: medium
 started: 2026-07-14
-last_updated: 2026-07-21 (v0.4 — domain restructure, status/priority/urgency vocabulary v2)
+last_updated: 2026-07-22 (v0.5 — ledger admin/reporting skill designed, ADR-0006)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
@@ -31,7 +31,15 @@ This framework never writes, edits, or otherwise modifies any file in a tracked 
 
 ## Versioning (from v0.2)
 
-Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.4**. v0.1 applied retroactively to everything before the guideline system existed.
+Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.5**. v0.1 applied retroactively to everything before the guideline system existed.
+
+## v0.5 (2026-07-22) — reporting/admin skill designed
+
+Prompted by the second ad hoc "where are we on THANN" conversation — the case `ROADMAP.md`'s "Reporting skills" section had been waiting for since v0.2. David asked for a repeatable, scalable way to pull project status at different depths, framed as a slash-command-style skill, and explicitly delegated the mechanism to Claude rather than prescribing it. Two candidate phrasings of that request were reviewed first: David's own conversational ask (kept — correct division of labor, delegates implementation while stating real requirements) versus a pre-written "spec" that invented a training/knowledge-graph implementation with no bearing on how a Claude skill or this framework actually work (rejected).
+
+Designed: one skill, `ledger`, with a verb grammar (`report | sync | log | new | portfolio | audit`) instead of one skill per capability, so the trigger surface stays simple and extensible. `report` gets a four-tier depth ladder — `glance` (front-matter only; renamed from an earlier `pulse`, flagged as misleading), `brief` (default; adds recent ledger entries + next-step line), `full` (adds live re-verification against `guidelines/project-standard.md`, claimed-vs-verified labeling), `audit` (adds a principles-compliance pass). Project names resolve against `_index.md` before any verb acts; every report closes with a `last verified: <date> · depth: <x>` footer. ADR-0001's read-only boundary carries over unconditionally to every verb that touches a tracked project's real source. Recorded as ADR-0006.
+
+Not yet done: packaging as an installable `.skill` file, end-to-end testing. Logic testing against THANN (which is already a tracked unit, `business/egraine/ventures/thann`) is next.
 
 ## v0.4 (2026-07-21) — domain restructure, vocabulary v2
 

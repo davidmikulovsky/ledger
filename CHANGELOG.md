@@ -2,6 +2,12 @@
 
 *Plain-language version history of Ledger itself — what changed and when, not why (that's `adr/`) and not what's happening in tracked projects (that's each unit's own `ledger.md`). Newest first.*
 
+## v0.5 — 2026-07-22
+
+Reporting/admin skill designed: a single `ledger` skill rather than one per capability, invoked with a verb grammar (`report | sync | log | new | portfolio | audit`) and, for `report`, a four-tier depth ladder (`glance | brief | full | audit`) running from a one-line status check up to a full principles-compliance audit. Project-name resolution against `_index.md` and a `last verified: <date> · depth: <x>` footer on every report make the claimed-vs-verified discipline visible in the output itself. Answers the "Short reports, single or multi-project" item on `ROADMAP.md`.
+
+Recorded as ADR-0006. Design only — not yet packaged as an installable skill, not yet tested end-to-end.
+
 ## v0.4 — 2026-07-21
 
 Domain structure changed: `career`, `health`, `nutrition`, `relationships`, `sport` nested under a new top-level `personal` domain — top level is now `business` / `personal` / `projects` instead of seven flat domains.

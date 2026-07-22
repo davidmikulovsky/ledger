@@ -13,7 +13,7 @@ _Last generated: 2026-07-22 (new `team` domain + AI-LAB unit added)_
 | business | egraine / skinthea | goal | dormant | low | low | 2026-07-21 |
 | business | egraine / egraine-website-rebuild | sprint | active | high | medium | 2026-07-21 |
 | projects | jascandi | maintenance | active | low | low | 2026-07-21 |
-| projects | ledger (this framework, v0.4) | maintenance | active | medium | medium | 2026-07-21 |
+| projects | ledger (this framework, v0.5) | maintenance | active | medium | medium | 2026-07-22 |
 | team | ai-lab (personal & team AI adoption) | maintenance | active | high (provisional) | medium | 2026-07-22 |
 | personal / career | — | — | no units yet | — | — | — |
 | personal / health | — | — | no units yet | — | — | — |
@@ -25,7 +25,7 @@ Urgency values marked "proposed" in each unit's own `_unit.md` are Ledger's firs
 
 ## Governance
 
-Decisions about Ledger itself live in `adr/` as ADRs (currently 5 — read-only boundary, local hosting, project-standard/tracking-protocol, status/priority vocabulary v1, domain restructure + vocabulary v2). How Ledger operates day to day is written down in `guidelines/` (`project-standard.md` — including the canonical `status`/`priority`/`urgency` vocabulary — `tracking-protocol.md`, `workflow.md`, `checklists.md`), written to be usable outside Ledger's own scope. Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.4) / `ROADMAP.md`.
+Decisions about Ledger itself live in `adr/` as ADRs (currently 6 — read-only boundary, local hosting, project-standard/tracking-protocol, status/priority vocabulary v1, domain restructure + vocabulary v2, ledger admin/reporting skill design). How Ledger operates day to day is written down in `guidelines/` (`project-standard.md` — including the canonical `status`/`priority`/`urgency` vocabulary — `tracking-protocol.md`, `workflow.md`, `checklists.md`), written to be usable outside Ledger's own scope. Ledger's own spec/version history is in `SPEC.md` / `CHANGELOG.md` (currently v0.5) / `ROADMAP.md`.
 
 ## Needs your call directly (not just execution)
 
