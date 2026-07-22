@@ -2,6 +2,16 @@
 
 *Plain-language version history of Ledger itself — what changed and when, not why (that's `adr/`) and not what's happening in tracked projects (that's each unit's own `ledger.md`). Newest first.*
 
+## v0.6 — 2026-07-22
+
+Framework hardening after the first full self-audit (stored at `reviews/framework/2026-07-22-framework-evaluation.md`, with the resulting plan alongside it). The audit found real drift: a declared-vs-reality contradiction on THANN, three on-disk projects untracked, Medex tracked as an active sprint with no git, systemic git-lock cruft, guideline-copy drift risk, and a parent/child safety gap. Phase 0 (this entry) records the governance decisions; build and data-reconciliation follow.
+
+Five ADRs accepted: **0007** group representation & spin-off model (ventures are independent units linked by `parent:` + `portfolio_members:`, not nested — so any venture can be sold by dropping the link; supersedes the `sub_units:` convention); **0008** child-safety write boundary (a child/sibling session treats parent/sibling folders read-only; destructive ops need explicit ok + backup — the mirror of ADR-0001); **0009** git-lock & folder-access policy (read-only by default, David sole grantor, ask before first git write, lock prevention + cleanup runbook + `_to_delete/` fallback); **0010** canonical guidelines / shared-resources repo (ALFA+OMEGA is now git and the single source of truth; versioned by tag + in-doc stamp; Ledger's own guideline copies superseded); **0011** scan engine & state model (`ledger scan` → `ledger-state.json`, the snapshot spine every other v0.6 skill reads).
+
+Guidelines consolidated: `guidelines/project-standard.md`, `tracking-protocol.md`, `workflow.md`, `checklists.md` replaced with pointer stubs to the canonical ALFA+OMEGA copies (ADR-0010) — not deleted, so existing path references still resolve. The scan engine, the `ledger` skillset, and the dashboard generator are slated to live in ALFA+OMEGA too.
+
+Design only for the build items (scan engine, expanded verb grammar, dashboard, automation) — Phase 1 onward, not yet shipped, per the standing "don't backfill to look further along than it is" principle.
+
 ## v0.5 — 2026-07-22
 
 Reporting/admin skill designed: a single `ledger` skill rather than one per capability, invoked with a verb grammar (`report | sync | log | new | portfolio | audit`) and, for `report`, a four-tier depth ladder (`glance | brief | full | audit`) running from a one-line status check up to a full principles-compliance audit. Project-name resolution against `_index.md` and a `last verified: <date> · depth: <x>` footer on every report make the claimed-vs-verified discipline visible in the output itself. Answers the "Short reports, single or multi-project" item on `ROADMAP.md`.

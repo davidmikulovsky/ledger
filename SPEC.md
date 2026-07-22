@@ -39,6 +39,8 @@ LEDGER/
   _index.md                 rolled-up view across every unit
 ```
 
+> **Guidelines are now canonically maintained in the shared ALFA+OMEGA git repo (ADR-0010).** The four files under `guidelines/` here are superseded pointer stubs, kept so existing path references still resolve; edit the canonical copies in ALFA+OMEGA (versioned by git tag + in-doc version stamp).
+
 ## Schema reference
 
 **`_unit.md` front-matter:**
@@ -64,4 +66,4 @@ Right now, Ledger is a simple tracking tool for git-backed projects, plus readin
 
 ## Version
 
-See `CHANGELOG.md`. Current: v0.5.
+See `CHANGELOG.md`. Current: v0.6.

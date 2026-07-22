@@ -6,11 +6,24 @@ type: maintenance
 status: active
 priority: medium
 urgency: low
-started: physical spa dissolved 2026-07-08; now online-only
-last_updated: 2026-07-21 (vocabulary v2 — urgency added)
+disputed: true
+started: physical spa dissolved 2026-07-08 (per decision log — see disputed note below)
+last_updated: 2026-07-22 (full check — live site conflicts with decision log)
 source:
   - "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
-  - "thann.fi (site, status unclear — not directly inspected)"
+  - "thann.fi (site — directly inspected 2026-07-22)"
+components:
+  decision_log:
+    present: true
+    location: "/Volumes/SAMSUNG 128 PEN-DRIVE/PROJECTS/egraine/00-Decision-Log/Egraine-Decision-Log.xlsx"
+    verified: "not this session — drive not connected/reachable"
+    how: "claimed only, per earlier session's read"
+  live_artifact:
+    present: true
+    url: "https://thann.fi"
+    status: "live — hybrid online store AND physical spa"
+    verified: "2026-07-22"
+    how: "fetched directly"
 ---
 
 # THANN
@@ -29,6 +42,12 @@ thann.fi itself hasn't been directly inspected in this review — everything abo
 
 A direct look at thann.fi itself (current content, e-commerce functionality, gift card flow) — nothing in the reviewed sources describes its actual current build state, only its business model.
 
-## Urgency — proposed 2026-07-21, for your review
+## Urgency — proposed 2026-07-21, still not yet confirmed as of 2026-07-22
 
-`urgency: low` — no known open action items or near-term deadline; site hasn't even been directly inspected yet, which itself signals nothing pressing is riding on it right now. Confirm or correct.
+`urgency: low` was proposed on 2026-07-21 pending your review; no confirmation or correction has been logged since, so it's still a proposal, not a settled value. This full check (2026-07-22) also surfaced a live-site conflict (see below) that may bear on whether `low` still holds — worth deciding both at once.
+
+## Disputed — live site conflicts with decision log (2026-07-22)
+
+thann.fi, fetched directly this session, describes itself as "THANN Shop & Day Spa" with an active physical location at Aleksanterinkatu 52 (Stockmann, 7th floor, Helsinki), listed hours, and dedicated "Menu & Etiquette" / "Treatments" pages — i.e. a live, operating physical spa. This directly conflicts with the decision log's claim (recorded 2026-07-08, previously treated as verified in this unit) that the physical spa was dissolved and THANN is now online-only, with THANN treatments moved to Medex Beauty Clinic.
+
+Per Ledger's read-only boundary, this is flagged and left unresolved rather than corrected at either source. Possible explanations, not adjudicated here: the site is stale/unmaintained since the dissolution, the decision log predates a reversal, or one of the two sources is simply wrong. This needs your call, not a tracker guess.

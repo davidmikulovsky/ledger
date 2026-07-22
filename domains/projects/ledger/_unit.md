@@ -6,7 +6,7 @@ status: active
 priority: medium
 urgency: medium
 started: 2026-07-14
-last_updated: 2026-07-22 (v0.5 — ledger admin/reporting skill designed, ADR-0006)
+last_updated: 2026-07-22 (v0.6 — first framework audit + governance ADRs 0007–0011, guidelines consolidated to ALFA+OMEGA)
 source:
   - "this folder (self-referential — tracks itself as a unit too)"
 ---
@@ -31,7 +31,15 @@ This framework never writes, edits, or otherwise modifies any file in a tracked 
 
 ## Versioning (from v0.2)
 
-Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.5**. v0.1 applied retroactively to everything before the guideline system existed.
+Ledger now tracks its own version in `CHANGELOG.md`, same standard it asks of tracked projects (see `SPEC.md`, applying `guidelines/project-standard.md` to itself). Current: **v0.6**. v0.1 applied retroactively to everything before the guideline system existed.
+
+## v0.6 (2026-07-22) — first framework audit + governance hardening (Phase 0)
+
+The first full self-audit (stored at `reviews/framework/2026-07-22-framework-evaluation.md`, plan beside it) confirmed the drift David suspected: the tracker's records had diverged from reality because every step is manual and nothing surfaces unknown gaps. Headline findings — THANN's unit contradicts its own repo and is mis-sourced; three on-disk projects (Ozuvox, project-cars, dives-enterprises) untracked; Medex an active/high sprint with no git; systemic git-lock cruft; guideline-copy drift risk; a parent/child safety gap already realized once.
+
+Phase 0 (decisions only) accepted five ADRs: **0007** group representation & spin-off model — ventures become independent top-level units linked by `parent:` + `portfolio_members:` rather than nested `sub_units:`, so a venture (Medex, THANN) can be sold/spun off by dropping the link; **0008** child-safety write boundary (child/sibling sessions read-only toward parent/sibling; destructive ops need explicit ok + backup); **0009** git-lock & folder-access policy (read-only default, David sole grantor, ask before first git write, lock runbook); **0010** canonical guidelines/shared-resources repo — David stood ALFA+OMEGA up as a git repo this session; Ledger's four `guidelines/*.md` replaced with pointer stubs to it; **0011** scan engine & state model (`ledger scan` → `ledger-state.json`, the spine every other v0.6 skill reads).
+
+Not yet done: the build (scan engine, expanded verbs `scan/audit/gaps/check/doctor`, dashboard, weekly automation) is Phase 1+; data reconciliation (fix THANN, onboard untracked projects, promote THANN/Medex to top-level units, flag Medex no-git, clear live locks) is Phase 2. Locked with David: linked/spin-off-ready model, simple-static dashboard first, weekly checkup.
 
 ## v0.5 (2026-07-22) — reporting/admin skill designed
 
