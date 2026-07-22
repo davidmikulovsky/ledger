@@ -10,7 +10,7 @@ domains/<domain>/<unit>/
   ledger.md     ← append-only dated log of what happened, in your own words or mine
 ```
 
-- **domain** = a broad area, nested one level deep: `business`, `personal` (with `career`, `health`, `nutrition`, `relationships`, `sport` underneath), `projects` — add more anytime, nothing about the design assumes this list is final.
+- **domain** = a broad area, nested one level deep: `business`, `personal` (with `career`, `health`, `nutrition`, `relationships`, `sport` underneath), `projects`, `team` (org/team-level capability building, e.g. AI adoption) — add more anytime, nothing about the design assumes this list is final.
 - **unit** = a specific thing within that domain: a project, a venture, a person, a workout block, a recipe collection. Units can nest (e.g. `business/egraine/ventures/medex-beauty-clinic`) when one thing has sub-things.
 - **_unit.md** front-matter fields:
   - `type`: goal | plan | sprint | milestone | maintenance — pick whatever fits; maintenance = ongoing, no finish line (most relationships, most business operations).

@@ -2,7 +2,7 @@
 
 Rolled-up view across every domain. Regenerate by asking any time ("update the index") — it's derived from each unit's `_unit.md`, not maintained separately by hand.
 
-_Last generated: 2026-07-21 (v0.4 — `personal` domain nesting; status/priority simplified, urgency added, ADR-0005)_
+_Last generated: 2026-07-22 (new `team` domain + AI-LAB unit added)_
 
 | Domain | Unit | Type | Status | Priority | Urgency | Last updated |
 |---|---|---|---|---|---|---|
@@ -14,6 +14,7 @@ _Last generated: 2026-07-21 (v0.4 — `personal` domain nesting; status/priority
 | business | egraine / egraine-website-rebuild | sprint | active | high | medium | 2026-07-21 |
 | projects | jascandi | maintenance | active | low | low | 2026-07-21 |
 | projects | ledger (this framework, v0.4) | maintenance | active | medium | medium | 2026-07-21 |
+| team | ai-lab (personal & team AI adoption) | maintenance | active | high (provisional) | medium | 2026-07-22 |
 | personal / career | — | — | no units yet | — | — | — |
 | personal / health | — | — | no units yet | — | — | — |
 | personal / nutrition | — | — | no units yet | — | — | — |

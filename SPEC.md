@@ -32,6 +32,7 @@ LEDGER/
     business/<unit>/
     personal/<career|health|nutrition|relationships|sport>/<unit>/
     projects/<unit>/
+    team/<unit>/
       _unit.md             type, status, priority, urgency, disputed, source links, components
       ledger.md            append-only dated history
   reviews/                 optional daily/weekly rollups, empty until used
@@ -44,7 +45,7 @@ LEDGER/
 
 | Field | Values | Notes |
 |---|---|---|
-| `domain` | business, personal (career, health, nutrition, relationships, sport), projects, ... | open-ended, add more as needed; `personal` nests its own sub-domains |
+| `domain` | business, personal (career, health, nutrition, relationships, sport), projects, team, ... | open-ended, add more as needed; `personal` nests its own sub-domains |
 | `unit` | free text (matches folder name) | |
 | `type` | goal \| plan \| sprint \| milestone \| maintenance | see `guidelines/workflow.md` for how each moves through the loop |
 | `status` | active \| blocked \| dormant \| ended | canonical set, see `guidelines/project-standard.md` — lifecycle state, independent of priority and urgency |
