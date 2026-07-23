@@ -3,6 +3,8 @@
 **Status:** Accepted
 **Date:** 2026-07-22
 
+**Field names and delivery mechanism refined by [ADR-0012](0012-family-schema-and-delivery-mechanism.md) (2026-07-23)** — the core decision below (link, not containment) is unchanged; ADR-0012 locks the exact field names (`parent`/`members`, not `portfolio_members`) and gives the model an actual path into `project-standard.md`, which this ADR never specified.
+
 ## Context
 
 Egraine Oy is a parent entity (Nordic distributor) with ventures — Medex Beauty Clinic and THANN — that on disk are independent sibling repos, each with its own git, docs, and decision log, with the child projects referencing the parent read-only. Ledger v0.5 modeled them as nested `sub_units:` under the Egraine unit (`business/egraine/ventures/*`). The 2026-07-22 framework audit found this diverged from disk (the THANN child's real repo at `PROJECTS/Thann` wasn't even referenced by its unit) and — more decisively — David confirmed ventures may be **sold or spun out**: Medex or THANN could become separate from Egraine. Containment-by-nesting fights both the filesystem and the divestiture requirement.

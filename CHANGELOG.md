@@ -2,6 +2,41 @@
 
 *Plain-language version history of Ledger itself — what changed and when, not why (that's `adr/`) and not what's happening in tracked projects (that's each unit's own `ledger.md`). Newest first.*
 
+## v0.7.3 — 2026-07-23
+
+ADR-0012 rollout closed out, per David's explicit go-ahead on all four open items from the v0.7.2 entry:
+
+1. **Eden's Eva and SkinThea converted to the `mentions:` tier.** Neither ever had real folder or repo activity — both existed only as Egraine Decision Log entries — so their standalone `_unit.md`/`ledger.md` files are retired. They now live as two lines in `egraine/_unit.md`'s new `mentions:` field, with full history preserved (not deleted — the device bridge can move but not delete) at `LEDGER/_to_delete/eden-eva_unit.md`, `eden-eva_ledger.md`, `skinthea_unit.md`, `skinthea_ledger.md`. David can clear that folder natively whenever convenient. Nothing about either venture's real-world status changed.
+2. **Promotion of Thann/Medex to flat top-level units — analyzed, not applied.** A consequences write-up was added to `egraine/_unit.md` ("Promoting Thann/Medex — consequences"): the move is mechanically low-risk (Ledger's own files only) but functionally inert today, since `ledger.py`'s `load_units()` already walks the entire `domains/` tree regardless of nesting depth. The real tradeoff is timing — promote now calmly, or later under the pressure of an actual spin-off. Left open for David.
+3. **Guideline copies inside tracked projects' own repos — declined.** David: "forbidden." No write made to Egraine/Thann/Medex's own repos. The `GUIDELINES-STALE` drift check accordingly still can't fire for any of them — a known, accepted limitation, not a bug.
+4. **ALFA+OMEGA guidelines-v2.1 committed and tagged.** Commit `48e9697` on `main` (7 files: `CHANGELOG.md`, all 5 guideline docs, `ledger.py`), tag `guidelines-v2.1` — David to push.
+
+Also shipped this cycle: the two `ledger.py` checks proposed in v0.7.2 (`MEMBER-MISMATCH`, `ORPHAN-PARENT`) — implemented in `build_state()`, applied to the real ALFA+OMEGA repo, syntax-checked, and smoke-tested against the actual Egraine family data (`ledger.py scan`): 7 units scanned cleanly post-conversion (down from 9), zero false positives from either new check. A stray `.git/index.lock`/`HEAD.lock`/`objects/maintenance.lock` picked up mid-session during this work was moved to `ALFA+OMEGA/_to_delete/` per the standard lock-handling runbook, not left in place.
+
+Every write this entry describes was verified directly against the live device (`md5sum` for file content, `git log`/`git status` for the commit/tag), not assumed from a local draft.
+
+## v0.7.2 — 2026-07-23
+
+ADR-0012 accepted: family schema & delivery mechanism. Closes a real gap the uploaded proposal doc (from David's separate Cowork session in the Egraine repo) surfaced — ADR-0007's link-not-nesting decision for group/family projects existed only in `adr/`, which no tracked project's own docs ever reference, and the field names it proposed (`portfolio_members`) never matched what `ledger.py`'s own code already reads (`parent`). David's framing: this is a communication/delivery problem, not a structural one — no physical restructuring was done or proposed as part of this.
+
+Fixed by: (1) locking canonical field names in ADR-0012 (`role`, `parent`, `relationship`, `members` for real family members; a new `mentions:` list for related-but-not-tracked entities with no real folder — the "children's children / orphans" case); (2) delivering the schema through `project-standard.md` and `tracking-protocol.md` — the docs actually copied into tracked projects, not just the ADR log; (3) adding a "Folder and naming conventions" section to `project-standard.md`; (4) bumping the ALFA+OMEGA guidelines stamp v2.0→v2.1 (content-only bumps are invisible to the `GUIDELINES-STALE` check — this one is real and detectable).
+
+Applied this cycle: `parent_unit:`/`sub_units:` renamed to `role:`/`parent:`/`members:` (plus `relationship: distributed-brand` for Thann/Medex, per ADR-0007's own language) across all 5 Egraine-family unit files (`egraine`, `thann`, `medex-beauty-clinic`, `eden-eva`, `skinthea`). Field-name fix only — no folder moves, no change to what any of these units actually are. Every write verified directly against the live device via `md5sum`, not the file-staging cache, per the lesson from the earlier v0.7.1 false-alarm entry.
+
+Not applied, left for David: converting Eden's Eva/SkinThea to the new `mentions:` tier; physically promoting Thann/Medex to flat top-level units; placing an actual guidelines copy inside Egraine/Thann/Medex's own repos (a write to a tracked project); running `git commit`/`git tag guidelines-v2.1` in ALFA+OMEGA; the two proposed new `ledger.py` flags (`MEMBER-MISMATCH`, `ORPHAN-PARENT`) — presented as a diff, not coded.
+
+## v0.7.1 — 2026-07-23
+
+**Correction, same session:** an earlier version of this entry reported that today's Egraine audit writes and Thann's 07-22 fix had silently reverted mid-session, and speculated a concurrent-session write conflict. That was a false alarm on this tool's own part — a stale local read cache in the Cowork session's file-staging pipeline was serving pre-fix content back after the real writes had already succeeded, not a real revert on disk. Verified directly against the actual files (md5sum via a live shell on the device, not the cached staging path): every write this session — Thann's fix, Egraine's full audit, this changelog, the index — matched exactly what was intended, the whole time. No data was ever lost or overwritten. Retracting the earlier speculation about a concurrent-session conflict; nothing about David's separate Cowork session in the Egraine repo was at fault.
+
+## v0.7 — 2026-07-22
+
+Phase 1 (scan engine + gap verbs — `scan`/`audit`/`gaps`/`check`/`doctor`, `ledger-state.json` as the shared spine) and Phase 3 (dashboard — self-contained HTML, health-colored portfolio grid, fun-facts stats) both shipped this cycle, per `claude/ledger-phase1-shipped-2026-07-22.md` and `claude/ledger-phase3-dashboard-2026-07-22.md` in the attached project. Real first scan found 7 red · 1 amber · 1 green, headlined by the whole Egraine family being sourced to a disconnected pen drive.
+
+Phase 2 (data reconciliation across the portfolio) is now in progress, run by David directly rather than as a Ledger-initiated action — Thann is the first unit reconciled (source repointed to its own git repo, disputed flag cleared, priority/urgency corrected to match the project's own record; see `domains/business/egraine/ventures/thann/ledger.md`). Remaining Phase 2 items (untracked Ozuvox/project-cars/dives-enterprises, Medex's missing git, live lock cleanup, promoting Thann/Medex to flat ADR-0007 units) are still open.
+
+The four guideline documents referenced throughout this file are maintained as v2.0 in the canonical ALFA+OMEGA repo (ADR-0010) — confirmed current as of this entry.
+
 ## v0.6 — 2026-07-22
 
 Framework hardening after the first full self-audit (stored at `reviews/framework/2026-07-22-framework-evaluation.md`, with the resulting plan alongside it). The audit found real drift: a declared-vs-reality contradiction on THANN, three on-disk projects untracked, Medex tracked as an active sprint with no git, systemic git-lock cruft, guideline-copy drift risk, and a parent/child safety gap. Phase 0 (this entry) records the governance decisions; build and data-reconciliation follow.
